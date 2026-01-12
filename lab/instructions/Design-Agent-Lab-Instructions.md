@@ -92,13 +92,13 @@ The Design Agent produces:
 1. Navigate to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com)
 2. Sign in with your Microsoft 365 credentials
 
-<img src="002-Username and pass.png" alt="Username and Password" width="500">
+![alt text](<002-Username and pass.png>)
 
 Select United States, wait until the agent comes up and Refresh the page
 
 <img src="003-Refresh page.png" alt="Refresh page" width="500">
 
-4. Select your target **Power Platform environment** from the environment picker in the top-right corner
+1. Select your target **Power Platform environment** from the environment picker in the top-right corner
 
 > 💡 **Tip:** Ensure you select an environment where you have System Administrator or Environment Maker privileges.
 
