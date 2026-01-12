@@ -76,13 +76,13 @@ The Design Agent produces:
 ### Environment Setup Checklist
 
 | Component | Status |
-|-----------|--------|
+| ---------- | ------ |
 | Copilot Studio access | ⬜ Verified |
 | Power Platform environment | ⬜ Created |
 | SharePoint document library | ⬜ Configured |
 | Email connector | ⬜ Available |
 
-#### Step 0: SahrePoint Site Configuration
+#### Step 0: SharePoint Site Configuration
 ---
 
 ## Module 1: Solution Import (10 minutes)
@@ -197,6 +197,7 @@ Body: include JSON attachment and a human-friendly HTML summary (optional)
 
 <img src="008-Welcome message.png" alt="Welcome" width="300">
 
+===
 
 ## Module 2: Connection Configuration
 
