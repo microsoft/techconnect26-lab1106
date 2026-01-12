@@ -29,14 +29,14 @@
 
 ### Introduction
 
-The **Design Agent** is a Microsoft Copilot Studio–built architecture generator that leverages deep-reasoning capabilities (GPT-5 Reasoning model) to transform application intake data into comprehensive Azure architectural designs. This solution enables rapid generation of baseline Azure architectures, significantly accelerating the design phase of cloud migration and modernization engagements.
+The **Intake Agent** and **Design Agent** are a Microsoft Copilot Studio–built architecture generator that leverages deep-reasoning capabilities (GPT-5 Reasoning model) to transform application intake data into comprehensive Azure architectural designs. This solution enables rapid generation of baseline Azure architectures, significantly accelerating the design phase of cloud migration and modernization engagements.
 
 ### What You Will Learn
 
 By the end of this lab, you will be able to:
 
-- ✅ Import the Design Agent solution into your Copilot Studio environment
-- ✅ Configure required connections (SharePoint, Email, Power Automate)
+- ✅ Import the Intake Agent and Design Agent solutions into your Copilot Studio environment
+- ✅ Configure required connections (SharePoint, Email)
 - ✅ Upload and configure knowledge base files
 - ✅ Generate complete Azure architecture documents from intake data
 - ✅ Understand the five standardized architecture views
@@ -76,20 +76,21 @@ The Design Agent produces:
 ### Environment Setup Checklist
 
 | Component | Status |
-| ---------- | ------ |
+| ----------- | -------- |
 | Copilot Studio access | ⬜ Verified |
 | Power Platform environment | ⬜ Created |
 | SharePoint document library | ⬜ Configured |
 | Email connector | ⬜ Available |
 
 #### Step 0: SharePoint Site Configuration
----
+
+===
 
 ## Module 1: Solution Import (10 minutes)
 
-### Step 1.1: Accessing Microsoft Copilot Studio
+### Step 1.1: Access Copilot Studio (1 minute)
 
-- Open the Edge browser and navigate to +++https://copilotstudio.microsoft.com+++ and login with the following suggested Microsoft 365 work or school account:
+1. Open the Edge browser and navigate to +++https://copilotstudio.microsoft.com+++ and login with the following suggested Microsoft 365 work or school account:
 
 **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
@@ -102,28 +103,28 @@ For the **user's password**, provide the following value:
 > 
 > **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
 
-- Wait between 10 and 15 seconds for the process to configure your personal developer environment to start. You will see a dialog informing you about the ongoing process of creating your personal environment.
+2. Wait between 10 and 15 seconds for the process to configure your personal developer environment to start. You will see a dialog informing you about the ongoing process of creating your personal environment.
 
 ![The dialog informing about the developer environment creation.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/mcs-creating-environment-01.png)
 
-- If this is the very first time you run Copilot Studio you will need to select your country and to select the **Get Started** button.
+3. If this is the very first time you run Copilot Studio you will need to select your country and to select the **Get Started** button.
 
 ![The web page to start using Copilot Studio. You need to provide your country, to choose whether you want to receive messages from Microsoft about offerts, and to select to "Get Started".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/mcs-get-started-01.png)
 
-- Skip, or go through, the "Welcome to Copilot Studio!" dialog window
+4. Skip, or go through, the "Welcome to Copilot Studio!" dialog window
 
 ### Step 1.2: Navigate to Solutions (1 minute)
 
 1. Refresh page and click on Copilot Studio icon 
 
-<img src="1.2_00-Navigate to Solutions.png" alt="Refresh" width="500">
+![Refresh](1.2_00-Navigate-to-Solutions.png)
 
 2. In the left navigation pane, click on **Solutions**
 3. If Solutions is not visible, click **More** (•••) to expand the menu
 
 ### Step 1.3: Import the Solution (5 minutes)
 
-<img src="1.3_00-Import solutions.png.png" alt="Refresh" width="500">
+![Refresh](1.3_00-Import-solutions.png)
 
 
 #### Step 1.3.1: Import Intake agent
@@ -131,43 +132,43 @@ For the **user's password**, provide the following value:
 1. Click **Import solution** from the command bar
 2. Click **Browse** select the Design Agent solution package (`AIMigrateIntakeAgent_1_0_0_7.zip` file)
 
-<img src="1.3.1_00-Import Intake Agent Solution.png" alt="Browse" width="500">
+![Browse](1.3.1_00-Import-Intake-Agent-Solution.png)
 
 3. Click **Open**
 4. Click **Next**
 5. Click **Next**
 6. When green check is in all services then click **Import**
 
-<img src="1.3.1_01-Import Intake Agent Solution.png" alt="Import" width="500">
+![Import](1.3.1_01-Import-Intake-Agent-Solution.png)
 
 #### Step 1.3.2: Import Design agent
 
 1. Click **Import solution** from the command bar
 2. Click **Browse** select the Design Agent solution package (`.zip` file)
 
-<img src="1.3.2_00-Import Design Agent Solution.png" alt="Browse" width="500">
+![Browse](1.3.2_00-Import-Design-Agent-Solution.png)
 
 3. Click **Open**
 4. Click **Next**
 5. Click **Next**
 6. When green check is in all services then click **Import**
 
-<img src="1.3.2_01-Import Design Agent Solution.png" alt="Import" width="500">
+![Import](1.3.2_01-Import-Design-Agent-Solution.png)
 
 
 **5. Wait until the solution is imported**
 
-<img src="007-Solution Imported.png" alt="Imported" width="500">
+![Imported](007-Solution-Imported.png)
 
 **Both solution are imported with warnings**
 
-<img src="1.3_01-Import Solutions.png" alt="Import" width="500">
+![Import](1.3_01-Import-Solutions.png)
 
 ### Step 1.4: Configure Import Settings (2-5 minutes)
 ### Step 1.4.1: Configure Intake Agent Settings
 1. Select the Intake Agent and click **Settings**
 
-<img src="1.4.1_00 Intake Agent Settings.png" alt="Imported" width="500">
+![Imported](1.4.1_00-Intake-Agent-Settings.png)
 
 1.4.1.a: Outlook (Email) Connection — Required
 The agent needs Outlook to send the intake summary as an email with a JSON payload (and optional HTML summary). Setup Steps
@@ -205,10 +206,9 @@ Body: include JSON attachment and a human-friendly HTML summary (optional)
 
 **Expected Overview Screen:**
 
-<img src="008-Welcome message.png" alt="Welcome" width="300">
+![Welcome](008-Welcome-message.png)
 
 ===
-
 ## Module 2: Connection Configuration
 
 After importing the solution, you must establish connections for the agent to function correctly.
@@ -225,9 +225,9 @@ The Design Agent requires the following connections:
 
 In Copilot Studio, navigate to **Settings** > **Connections**
 
-<img src="2.1_00-Settings.png" alt="Settings" width="500">
+![Settings](2.1_00-Settings.png)
 
-<img src="2.1_01-Connection settings.png" alt="Connections" width="500">
+![Connections](2.1_01-Connection-settings.png)
 
 ### Step 2.2: Configure SharePoint Connection (1 minute)
 
@@ -251,12 +251,12 @@ Document Library: Architecture Documents
 1. Locate the **Office 365 Outlook** connection reference
 2. Click **Connect**
 
-<img src="2.3_00 Configure email connection.png" alt="Email connection" width="500">
+![Email connection](2.3_00-Configure-email-connection.png)
 
 3. Verify Authenticate with your organizational email account
 4. Click **Submit**
 
-<img src="2.3_01 Configure email connection_Submit.png" alt="Email connection submit" width="500">
+![Email connection submit](2.3_01-Configure-email-connection_Submit.png)
 
 
 ### Step 2.4: Verify All Connections (''20)
@@ -270,7 +270,7 @@ Document Library: Architecture Documents
 | Office 365 Outlook | ✅ Connected |
 | Dataverse | ✅ Connected |
 
-<img src="011-Connect.png" alt="Connections" width="600">
+![Connections](011-Connect.png)
 
 ### Step 2.5: Review Flow Connections (30 seconds)
 
@@ -283,7 +283,7 @@ Document Library: Architecture Documents
    - **SaveArchitectureDocument** – SharePoint, Outlook connections
 
 
----
+===
 
 ## Module 3: Knowledge Base Setup
 
@@ -327,7 +327,7 @@ Web Search: Disabled (Recommended for secure environments)
 
 > ⚠️ **Security Note:** Keep Web Search disabled for engagements involving sensitive customer data.
 
----
+===
 
 ## Module 4: Using the Design Agent (Interactive Mode)
 
@@ -424,7 +424,7 @@ The agent will generate a comprehensive architecture document with the following
 └── 📊 Azure Resource Table
 ```
 
----
+===
 
 ## Module 5: Autonomous Agent Mode
 
@@ -704,7 +704,7 @@ For questions, contact your engagement manager.
 | Error handling | Monitor the Archive folder for failed documents |
 | Notifications | Configure team distribution list for visibility |
 
----
+===
 
 ## Module 6: Topic Walkthrough – Generate and Save Azure Architecture Doc
 
@@ -919,7 +919,7 @@ To customize the topic for specific customer needs:
 | Add approval workflow | Insert a Power Automate action before save |
 | Email to multiple recipients | Modify the save/send flow in Power Automate |
 
----
+===
 
 ## Module 7: Understanding the Output
 
@@ -1066,7 +1066,7 @@ The final section provides deployment-ready resource specifications:
 
 > 📋 **Note:** The resource table is provided in both Markdown and plain text formats for compatibility with deployment automation tools.
 
----
+===
 
 ## Module 8: Publishing to Channels
 
@@ -1282,7 +1282,7 @@ After publishing to channels, verify:
 - [ ] SharePoint integration works
 - [ ] Analytics are being captured
 
----
+===
 
 ## Appendix: Troubleshooting
 
@@ -1335,7 +1335,7 @@ Monitor agent performance in the **Analytics** section:
 | Successful runs | Percentage of completions | > 85% |
 | Average duration | Time to generate document | < 90 sec |
 
----
+===
 
 ## Summary
 
@@ -1360,7 +1360,7 @@ Congratulations! You have successfully completed the Design Agent lab. You are n
 5. **Integrate** with your deployment automation pipelines
 6. **Share** the generated documents with project stakeholders
 
----
+===
 
 ## Additional Resources
 
@@ -1370,7 +1370,7 @@ Congratulations! You have successfully completed the Design Agent lab. You are n
 | Azure Well-Architected Framework | [https://learn.microsoft.com/azure/well-architected](https://learn.microsoft.com/azure/well-architected) |
 | Power Automate Documentation | [https://learn.microsoft.com/power-automate](https://learn.microsoft.com/power-automate) |
 
----
+===
 
 **Document Version:** 1.0  
 **Author:** Microsoft Consulting Services  
