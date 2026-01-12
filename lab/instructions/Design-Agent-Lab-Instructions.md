@@ -92,7 +92,7 @@ The Design Agent produces:
 1. Navigate to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com)
 2. Sign in with your Microsoft 365 credentials
 
-![alt text](<002-Username and pass.png>)
+![002-Username_and_pass.png](<002-Username_and_pass.png>)
 
 Select United States, wait until the agent comes up and Refresh the page
 
