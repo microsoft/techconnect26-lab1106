@@ -1,3 +1,7 @@
+> **IMPORTANT NOTE: DO NOT UPDATE THIS FILE ANYMORE**
+> 
+> Update individual files as these full set of instructions has been split into separate modules.
+
 # Design Agent Lab Instructions
 
 ## Microsoft Copilot Studio – Azure Architecture Generator
