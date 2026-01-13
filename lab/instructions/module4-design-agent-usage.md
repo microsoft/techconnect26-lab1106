@@ -22,6 +22,7 @@
 ### Conversation Flow & Behavior
 
    The agent follows these **core instructions**:
+
    *   **Greet and start** the conversation.
    *   During the introduction, **request the architectural document** for the application.
    *   If provided, **review its contents** and **only ask** questions **not answered** in the document, based on targeted data points for Azure migration.

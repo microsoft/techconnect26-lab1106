@@ -142,11 +142,13 @@ After document extraction, the flow continues with a series of generation nodes:
 ## Step 6.4: Key Topic Components Explained
 
 ### 6.4.1 Trigger Node
+
 - **Type:** Agent-initiated trigger
 - **Description:** "Generates a target Azure architecture design document for a given application"
 - **Activation:** The agent chooses when to invoke this topic based on user intent
 
 ### 6.4.2 Variable Initialization
+
 ```
 Set variable: variablesText
 To value: ""
@@ -154,6 +156,7 @@ To value: ""
 Initializes the text variable that will hold the intake document content.
 
 ### 6.4.3 Condition Node
+
 Checks if the application name (`varApp`) is already provided:
 - **If Blank:** Prompts user for the application name
 - **All Other Conditions:** Proceeds with existing value
@@ -175,6 +178,7 @@ Save as: varFile (record)
 ```
 
 ### 6.4.5 ExtractDocumentText Action
+
 This Power Automate flow:
 - **Input:** `varFile` (the uploaded document)
 - **Process:** Extracts text content from PDF/DOCX
@@ -183,6 +187,7 @@ This Power Automate flow:
   - `intakeDocumentContent` (string) – Extracted text
 
 ### 6.4.6 Generation Prompts
+
 Each generation node uses the GPT-5 Reasoning model with specific prompts:
 
 | Node | Purpose | Output |

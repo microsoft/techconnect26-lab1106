@@ -1,6 +1,6 @@
-# Module 7: Understanding the Output
+# Module 8: Understanding the Output
 
-## Step 7.1: Introduction Section
+## Step 8.1: Introduction Section
 
 The generated document begins with a formal introduction:
 
@@ -14,13 +14,13 @@ The generated document begins with a formal introduction:
 
 ---
 
-# 🧭 Introduction
+## 🧭 Introduction
 
 SmartLogistics is a cloud-first logistics platform that provides 
 real-time shipment tracking, analytics, and deep...
 ```
 
-## Step 7.2: Data Flows Section
+## Step 8.2: Data Flows Section
 
 Documents the main data movement patterns:
 
@@ -40,7 +40,7 @@ transit and at rest by default. Observability signals flow to a unified
 logging and SIEM layer to support 24x7 operations and incident response.
 ```
 
-## Step 7.3: Architecture Views
+## Step 8.3: Architecture Views
 
 The agent generates five standardized architecture views:
 
@@ -62,7 +62,6 @@ The agent generates five standardized architecture views:
 **Purpose:** Shows Azure components and their integrations at a technical level.
 
 **Key Elements:**
-
 - Azure service selections
 - Integration patterns
 - Technology rationale
@@ -72,7 +71,6 @@ The agent generates five standardized architecture views:
 **Purpose:** Provides infrastructure-level detail for resource isolation and SCF controls.
 
 **Key Elements:**
-
 - Resource boundaries
 - SCF control mapping
 - Security configurations
@@ -82,7 +80,6 @@ The agent generates five standardized architecture views:
 **Purpose:** Illustrates virtual network connectivity and segmentation.
 
 **Key Elements:**
-
 - Hub-spoke network topology
 - Trust boundary implementation
 - Network security groups
@@ -92,12 +89,11 @@ The agent generates five standardized architecture views:
 **Purpose:** Presents logging and monitoring strategy.
 
 **Key Elements:**
-
 - Application Insights integration
 - Log Analytics workspace
 - Azure Sentinel SIEM
 
-## Step 7.4: Rationales Section
+## Step 8.4: Rationales Section
 
 Explains design decisions aligned with best practices:
 
@@ -126,11 +122,12 @@ API Management policies standardize throttling, caching, and transformation,
 reducing custom code and improving observability.
 ```
 
-## Step 7.5: Azure Resource Table
+## Step 8.5: Azure Resource Table
 
 The final section provides deployment-ready resource specifications:
 
-### 📊 Azure Resource Table — Visual
+```markdown
+## 📊 Azure Resource Table — Visual
 
 | Resource Name | Resource Type | SKU | Regions |
 |---------------|---------------|-----|---------|
@@ -142,6 +139,6 @@ The final section provides deployment-ready resource specifications:
 | Bastion-Host | Azure-Bastion | standard | eastus2 |
 | AppSpoke-VNet | Virtual-Network | n-a | eastus2-westeurope |
 | DataSpoke-VNet | Virtual-Network | n-a | eastus2-westeurope |
-
+```
 
 > 📋 **Note:** The resource table is provided in both Markdown and plain text formats for compatibility with deployment automation tools.

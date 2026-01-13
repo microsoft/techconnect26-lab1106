@@ -12,8 +12,9 @@ In Autonomous Mode, the agent:
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                  │
 │  ┌──────────────────┐                                           │
-│  │ 📁 SharePoint    │ ← Intake document uploaded to             │
-│  │    Intake Folder │   designated folder                       │
+│  │ 📁 SharePoint   | ← Intake document uploaded to             │
+│  │  Intake-Documents│     designated folder
+      Folder          │
 │  └────────┬─────────┘                                           │
 │           │                                                      │
 │           ▼ (Trigger)                                           │
@@ -148,86 +149,6 @@ Format:          Markdown with embedded Mermaid diagrams
 - Processed Date → Current timestamp
 - Generated Document → Link to output file
 
-## Step 5.6: Email Notification Configuration
-
-### 5.6.1 Configure Email Recipients
-
-The agent sends email notifications upon completion. Configure recipients in the Power Automate flow:
-
-1. Open **Power Automate** ([https://make.powerautomate.com](https://make.powerautomate.com))
-2. Navigate to **Solutions** > **Design Agent**
-3. Open the **SendArchitectureNotification** flow
-4. Edit the **Send an email (V2)** action:
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  EMAIL NOTIFICATION SETTINGS                                     │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  To:          @{triggerBody()?['RequestorEmail']}               │
-│               architect-team@contoso.com                        │
-│                                                                  │
-│  CC:          engagement-manager@contoso.com                    │
-│                                                                  │
-│  Subject:     ✅ Azure Architecture Generated: [AppName]        │
-│                                                                  │
-│  Body:        [See template below]                              │
-│                                                                  │
-│  Attachments: [Generated Architecture Document]                 │
-│                                                                  │
-│  Importance:  Normal                                            │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-### 5.6.2 Email Template
-
-The notification email includes:
-
-```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📧 EMAIL NOTIFICATION TEMPLATE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Subject: ✅ Azure Architecture Generated: [AppName]
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Hello,
-
-The Design Agent has successfully generated a target Azure 
-architecture document for the following application:
-
-📦 Application:     [AppName]
-📅 Generated:       [Timestamp]
-📁 Source Document: [Intake Document Name]
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-📄 Generated Document Details:
-
-• Document Location: [SharePoint Link]
-• Views Included: Logical, High-Level Technical, Detailed 
-  Infrastructure, Networking, Observability
-• Resource Table: Included (Markdown + Plain Text)
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-⚠️ Next Steps:
-
-1. Review the generated architecture document
-2. Validate design decisions with the customer
-3. Adjust configurations as needed
-4. Forward to the Deployment Agent for infrastructure provisioning
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-This is an automated message from the Design Agent.
-For questions, contact your engagement manager.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
-
 ## Step 5.7: Testing Autonomous Mode
 
 1. **Prepare a test intake document** with proper naming:
@@ -250,7 +171,7 @@ For questions, contact your engagement manager.
 ## Step 5.8: Autonomous Mode Best Practices
 
 | Best Practice | Recommendation |
-| --------------- | ---------------- |
+|---------------|----------------|
 | File naming | Use consistent `[AppName]-Intake` pattern |
 | Document format | PDF works best for text extraction |
 | Batch processing | Upload multiple files; they process sequentially |

@@ -97,46 +97,53 @@ You can now move to Module 6 - Topic Walkthrough
 
 Well done! You now understand the complete topic flow and generation process.
 
-You can now move to Module 7 - Understanding the Output
+You can now move to Module 7 - Add cost estimation topic
 
 ===
 
-!INSTRUCTIONS [Module 7 - Understanding the Output](https://raw.githubusercontent.com/microsoft/techconnect26-lab1106/refs/heads/main/lab/instructions/module7-agent-output.md)
+!INSTRUCTIONS [Module 7 - Add cost estimation topic](https://raw.githubusercontent.com/microsoft/techconnect26-lab1106/refs/heads/main/lab/instructions/module7-cost-estimation.md)
+
+Wow! You have added a new topic to the agent
+
+You can now move to Module 8 - Understanding the output
+
+===
+
+!INSTRUCTIONS [Module 8 - Understanding the Output](https://raw.githubusercontent.com/microsoft/techconnect26-lab1106/refs/heads/main/lab/instructions/module8-agent-output.md)
 
 Great! You now understand the structure and content of the generated architecture documents.
 
-You can now move to Module 8 - Publishing to Channels
+You can now move to Module 9 - Publishing to Channels
 
 ===
 
-!INSTRUCTIONS [Module 8 - Publishing to Channels](https://raw.githubusercontent.com/microsoft/techconnect26-lab1106/refs/heads/main/lab/instructions/module8-publishing-to-channels.md)
+!INSTRUCTIONS [Module 9 - Publishing to Channels](https://raw.githubusercontent.com/microsoft/techconnect26-lab1106/refs/heads/main/lab/instructions/module9-publishing-to-channels.md)
 
 Congratulations! You've successfully published the agents to various channels.
 
-You can now move to Module 9 - Appendix: Troubleshooting
+You can now move to the Appendix - Troubleshooting
 
 ===
 
-!INSTRUCTIONS [Module 9 - Appendix: Troubleshooting](https://raw.githubusercontent.com/microsoft/techconnect26-lab1106/refs/heads/main/lab/instructions/module9-appendix-troubleshooting.md)
+!INSTRUCTIONS [Appendix: Troubleshooting](https://raw.githubusercontent.com/microsoft/techconnect26-lab1106/refs/heads/main/lab/instructions/module10-appendix-troubleshooting.md)
 
 ===
 
-## Congratulations! 
+# Congratulations! 
 
-You have successfully completed the entire Design Agent lab. You are now able to:
+You have successfully completed the Design Agent lab. You are now able to:
 
 ✅ Import and configure the Design Agent solution  
 ✅ Establish required connections for SharePoint and email  
-✅ Use the agent in Interactive Mode for conversation-based architecture generation  
-✅ Configure Autonomous Mode with SharePoint triggers for automated processing  
+✅ Use the agent in **Interactive Mode** for conversation-based architecture generation  
+✅ Configure **Autonomous Mode** with SharePoint triggers for automated processing  
 ✅ Understand automatic document extraction and email notifications  
 ✅ Generate comprehensive Azure architecture documents  
 ✅ Understand the five standardized architecture views  
 ✅ Interpret and use the Azure Resource Configuration tables  
-✅ Publish the agent to Microsoft Teams, SharePoint, Power Apps, and other channels  
-✅ Troubleshoot common issues
+✅ **Publish the agent** to Microsoft Teams, SharePoint, Power Apps, and other channels  
 
-### Next Steps
+## Next Steps
 
 1. **Practice** generating architectures with different intake documents
 2. **Configure** autonomous mode for your team's SharePoint environment

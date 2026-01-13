@@ -1,7 +1,5 @@
 # Module 1: Solution Import (10 minutes)
 
-Module 1 will show you how to import the AI Migrate Intake and Design agents into the Copilot Studio environment
-
 ## Step 1.1: Access Copilot Studio
 
 1. Open the Edge browser and navigate to +++https://copilotstudio.microsoft.com+++ and login with the following suggested Microsoft 365 work or school account:
@@ -79,10 +77,9 @@ For the **user's password**, provide the following value:
 > Refresh the browser if don't see the agents
 
 ## Step 1.4: Configure Import Settings
-
 ### Step 1.4.1: Configure Intake Agent Settings
-
-1. Select the Intake Agent: click on **Copilot Studio icon**
+1. Select the Intake Agent
+2. Click on **Copilot Studio icon**
 
 ![IntakeAgentSettings](1.4.1_00-Intake-Agent-Settings.png)
 
