@@ -1,6 +1,11 @@
-# @lab.Title
+@lab.Title
+## Welcome to Your Lab Environment
 
-Login to your VM with the following credentials...
+Tenant Name: ++@lab.CloudSubscription.TenantName++
+
+UserUpn: ++@lab.CloudPortalCredential(User1).Username++
+
+To begin, log into the virtual machine using the following credentials: +++@lab.VirtualMachine(Win11-Pro-Base).Password+++
 
 **Username: +++@lab.VirtualMachine(Win11-Pro-Base).Username+++**
 
