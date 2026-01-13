@@ -23,7 +23,7 @@
 10. [Module 8: Publishing to Channels](#module-8-publishing-to-channels)
 11. [Appendix: Troubleshooting](#appendix-troubleshooting)
 
----
+===
 
 ## Lab Overview
 
@@ -55,9 +55,9 @@ The Design Agent produces:
 | **Rationales** | Design decisions aligned with WAF and SCF |
 | **Resource Configuration Table** | Deployment-ready Azure resource specifications |
 
----
+===
 
-## Prerequisites
+## Prerequisites (10 minutes)
 
 ### Required Access
 
@@ -82,13 +82,78 @@ The Design Agent produces:
 | SharePoint document library | ⬜ Configured |
 | Email connector | ⬜ Available |
 
-#### Step 0: SharePoint Site Configuration
+#### Step 1: SharePoint Site Configuration
+1. Open the Edge browser, click on waffle icon first, then click on Microosft 365 and click Sign in in the top right:
+
+![Browser](<0.1_00-Sign-in-Office 365.png>)
+
+![Office365](<0.1_02-Sign-in-Office 365.png>)
+
+**Username: +++@lab.CloudPortalCredential(User1).Username+++**
+
+For the **user's password**, provide the following value:
+
+**Password: +++@lab.CloudPortalCredential(User1).Password+++**
+
+> [!TIP]
+> If the login UI prompts you for the user's **temporary password**, provide the following value:
+> 
+> **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
+
+2. On the left pannel, click on Apps/SharePoint/Open in new tab
+
+![Sharepoint](0.2_01-Open-SharePoint.png)
+
+3. Close the Welcome window
+4. Click on **Create site** then click on **Team site**
+
+![Site](0.2_02-Create-Site.png)
+
+> [!TIP]
+> If window in blank refresh browser
+
+5. Select **Standard team**
+6. Click **Use template**
+7. Type name of your site and click on **Next**
+
+![SiteName](0.2_07-Create-Site.png)
+
+8. Click on **Create**
+9. Let **Add members** box in blak and click on **Finish**
+10. Create the Folder Structure 
+ ```
+📁 Design Agent Documents
+├── 📁 Intake                    ← Upload intake documents here
+│   └── 📄 [AppName]-Intake.pdf
+├── 📁 Generated Architectures   ← Output documents stored here
+│   └── 📄 [AppName]-Target-Azure-Architecture-v1.0.md
+└── 📁 Archive                   ← Processed intake documents moved here
+```
+
+On the left menu click on **Document**, click on **+ Create or upload**, click on **Folder**. Type Name of the folder
+   
+![Folders](0.2_10-Create-Folders.png)
+
+12. Configure SharePoint Site Settings
+
+   1. Navigate to your SharePoint site
+   2. Go to **Site Settings** > **Site Contents**
+   3. Open the **Design Agent Documents** library
+   4. Click **⚙️ Settings** > **Library settings**
+   5. Under **Columns**, ensure the following metadata columns exist:
+
+   | Column Name | Type | Purpose |
+   |-------------|------|--------|
+   | Application Name | Single line of text | Stores extracted app name |
+   | Processing Status | Choice | Pending, Processing, Completed, Failed |
+   | Processed Date | Date and Time | Timestamp of processing |
+   | Generated Document | Hyperlink | Link to output document |
+
 
 ===
-
 ## Module 1: Solution Import (10 minutes)
 
-### Step 1.1: Access Copilot Studio (1 minute)
+### Step 1.1: Access Copilot Studio
 
 1. Open the Edge browser and navigate to +++https://copilotstudio.microsoft.com+++ and login with the following suggested Microsoft 365 work or school account:
 
@@ -113,16 +178,17 @@ For the **user's password**, provide the following value:
 
 4. Skip, or go through, the "Welcome to Copilot Studio!" dialog window
 
-### Step 1.2: Navigate to Solutions (1 minute)
+### Step 1.2: Navigate to Solutions
 
-1. Refresh page and click on Copilot Studio icon 
+1. Click on **Create** on the top right 
 
 ![Refresh](1.2_00-Navigate-to-Solutions.png)
 
 2. In the left navigation pane, click on **Solutions**
-3. If Solutions is not visible, click **More** (•••) to expand the menu
+> [!TIP]
+> If Solutions is not visible, click **More** (•••) to expand the menu
 
-### Step 1.3: Import the Solution (5 minutes)
+### Step 1.3: Import the Solution
 
 ![Refresh](1.3_00-Import-solutions.png)
 
@@ -144,7 +210,7 @@ For the **user's password**, provide the following value:
 #### Step 1.3.2: Import Design agent
 
 1. Click **Import solution** from the command bar
-2. Click **Browse** select the Design Agent solution package (`.zip` file)
+2. Click **Browse** select the Design Agent solution package (`AIMigrateDesignAgent_1_0_0_9.zip` file)
 
 ![Browse](1.3.2_00-Import-Design-Agent-Solution.png)
 
@@ -156,65 +222,68 @@ For the **user's password**, provide the following value:
 ![Import](1.3.2_01-Import-Design-Agent-Solution.png)
 
 
-**5. Wait until the solution is imported**
-
-![Imported](007-Solution-Imported.png)
-
-**Both solution are imported with warnings**
+**5. Wait until the solutions are imported**
 
 ![Import](1.3_01-Import-Solutions.png)
 
-### Step 1.4: Configure Import Settings (2-5 minutes)
-### Step 1.4.1: Configure Intake Agent Settings
-1. Select the Intake Agent and click **Settings**
+> [!TIP]
+> Refresh the browser if don't see the agents
 
-![Imported](1.4.1_00-Intake-Agent-Settings.png)
+### Step 1.4: Configure Import Settings
+#### Step 1.4.1: Configure Intake Agent Settings
+1. Select the Intake Agent: click on **Copilot Studio icon**
 
-1.4.1.a: Outlook (Email) Connection — Required
-The agent needs Outlook to send the intake summary as an email with a JSON payload (and optional HTML summary). Setup Steps
+![IntakeAgentSettings](1.4.1_00-Intake-Agent-Settings.png)
 
-In Copilot Studio → Data → Connections, ensure Office 365 Outlook is connected.
-(Recommended) Use a shared mailbox (e.g., migration-intake@contoso.com) to avoid sending from an individual account.
-Ensure the connection user has Send As rights if you plan to set the From field to the shared mailbox.
-In the agent’s Action/Flow that sends email:
-Set To = your migration team DL or mailbox (from environment variable)
-Optionally set From (Send As) = shared mailbox address
-Subject template: Azure Migration Intake – <Application Name> – <Date>
-Body: include JSON attachment and a human-friendly HTML summary (optional)
-⚠️ Important: Email will be sent from the account backing the Outlook connection unless a shared mailbox and Send As are configured.
+2. On the left menu click on Agents
+3. Click on **Tools** on the top ribbon
 
-### Step 1.4.2: Configure Design Agent Settings
-1. Review the solution components:
-   - Agent: Application Design Agent
-   - Topics (flows and conversation logic)
-   - Power Automate cloud flows
-   - Connection references
+![Outlook](1.4.1_02-Intake-Agent-Outlook.png)
 
-2. For each **Connection Reference**, you will need to either:
-   - Select an existing connection, OR
-   - Create a new connection (covered in Module 2)
+4. Scroll down to **Inputs** and in Input Name **To**, **Value field** replace it by **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
-3. Click **Import**
+5. **Save**
 
-> ⏱️ **Note:** The import process may take 5-10 minutes depending on the solution size.
+![Outlook](1.4.1_03-Intake-Agent-Outlook.png)
 
-### Step 1.5: Verify Import Success (1 minute)
+#### Step 1.4.2: Configure Design Agent Settings
 
 1. Once imported, locate **Application Design Agent** in your Agents list
-2. Click to open the agent
+2. Click on the Agent name
 3. Verify the agent overview displays correctly:
+
+![DesignAgent](1.4.2_00-Design-Agent.png)
 
 **Expected Overview Screen:**
 
 ![Welcome](008-Welcome-message.png)
 
 ===
-## Module 2: Connection Configuration
+## Module 2: Connection Configuration (11 minutes)
 
 After importing the solution, you must establish connections for the agent to function correctly.
 
-### Step 2.1: Identify Required Connections (2-5 minutes)
+### Step 2.1: Identify Required Connections
 
+#### Step 2.1.1 Intake Agent Connections
+
+1. Click on **App Intake Agent v1.3.4** from the list of **My Agents**
+
+   click **Settings**
+
+![Imported](1.4.1_00-Intake-Agent-Settings.png)
+
+2. Click on **Connection Settings** on the left menu, select one of the two connections and click **Connect** 
+
+![IntakeAgentConnections](1.4.1_01-Intake-Agent-Connections.png)
+
+3. Click **Submit**
+
+![Submit](1.4.1_02-Intake-Agent-Submit.png)
+
+4. Close (Do the same steps with the other connection)
+
+#### Step 2.1.2 Design Agent Connections
 The Design Agent requires the following connections:
 
 | Connection | Purpose |
@@ -223,84 +292,121 @@ The Design Agent requires the following connections:
 | **Office 365 Outlook** | Send generated documents via email |
 | **Microsoft Learn Docs MCP** | Knowledge |
 
-In Copilot Studio, navigate to **Settings** > **Connections**
+Click **Application Design Agent** from the list of Agents
+
+![DesignAgent](1.4.2_00-Design-Agent.png)
+
+navigate to **Settings** > **Connections**
 
 ![Settings](2.1_00-Settings.png)
 
 ![Connections](2.1_01-Connection-settings.png)
 
-### Step 2.2: Configure SharePoint Connection (1 minute)
+##### Step 2.1.2.1: Configure SharePoint Connection (1 minute)
 
 1. Locate the **Save Design Document** connection reference
 2. Click **Connect**
-3. Sign in with credentials that have access to your target SharePoint site
-4. Grant the required permissions when prompted
-5. Click **Create**
+
+![SharePointConnection](2.1.2.1_00-Design-Agent-SharePoint-Connection.png)
+
+3. Confirm is signed with the credentials that have access to your target SharePoint site, click **Submit**
+
+![SharePointConnection](2.1.2.1_01-Design-Agent-SharePoint-Connection.png)
 
 
-
-**SharePoint Site Configuration:**
-
-```
-Site URL: https://[tenant].sharepoint.com/sites/[YourDesignAgentSite]
-Document Library: Architecture Documents
-```
-
-### Step 2.3: Configure Email Connection (1 minute)
+##### Step 2.1.2.2: Configure Email Connection (1 minute)
 
 1. Locate the **Office 365 Outlook** connection reference
 2. Click **Connect**
 
-![Email connection](2.3_00-Configure-email-connection.png)
+![OutlookConnection](2.1.2.1_02-Design-Agent-Outlook-Connection.png)
 
-3. Verify Authenticate with your organizational email account
-4. Click **Submit**
+3. Confirm is signed with the credentials that have access to your target SharePoint site, click **Submit**
 
-![Email connection submit](2.3_01-Configure-email-connection_Submit.png)
+![outlookConnection](2.1.2.1_03-Design-Agent-Outlook-Connection.png)
 
+##### Step 2.1.2.2: Configure MCP Connection (1 minute)
 
-### Step 2.4: Verify All Connections (''20)
+1. Locate the **Microsoft LearnDocs MCP** connection reference
+2. Click **Connect**
 
-1. Navigate to **Power Platform Admin Center** > **Connections**
+![MCP](2.1.2.1_04-Design-Agent-MCP-Connection.png)
+
+3. Confirm is signed with the credentials that have access to your target SharePoint site, click **Submit**
+
+![MCP](2.1.2.1_05-Design-Agent-MCP-Connection.png)
+
+##### Step 2.1.2.3: Verify All Connections (''20)
+
 2. Verify all connections show **Connected** status:
 
 | Connection | Status |
 |------------|--------|
-| SharePoint | ✅ Connected |
 | Office 365 Outlook | ✅ Connected |
-| Dataverse | ✅ Connected |
+| Microsoft Learn Docs MCP | ✅ Connected |
+| Save Design Document | ✅ Connected |
 
-![Connections](011-Connect.png)
+Then Close **Settings** window
 
-### Step 2.5: Review Flow Connections (30 seconds)
+![Connections](2.1.2.3-Connections.png)
 
-1. Open **Power Automate** ([https://make.powerautomate.com](https://make.powerautomate.com))
-2. Navigate to **Flows**
-3. Review connection references:
-   - **Save Design Document** - SharePoint connection
-   - **ExtractDocumentText** – SharePoint connection
-   - **Invoke Design Agent** - Sharepoint, Copilot Studio connection
-   - **SaveArchitectureDocument** – SharePoint, Outlook connections
 
+
+### Step 2.2: Review Flow Connections
+
+1. Navigate to **Flows** on the left menu in Copilot Studio
+2. Review connection references:
+   - **Save Design Document** - SharePoint connection - **Status:Published**
+   - **ExtractDocumentText** – SharePoint connection - **Status:Published**
+   - **Invoke Design Agent** - Sharepoint, Copilot Studio connection - **Status:Draft**
+        ##### 2.1 Edit the Flow
+        ![InvokeDesignAgentFlow](2.2_00-Invoke-Agent-Flow.png)
+
+        Click on **When a file is created or modified (properties only)** and **Get file content**
+
+        ![InvokeDesignAgentFlow](2.2_01-Invoke-Agent-Flow.png)
+
+        In the action **When a file is created or modified (properties only)** delete content in *Site Address* and click on display button, select site address from the list (the one created in step 10 of Prerequisites) and Select Intake Folder. 
+        In the action **Get file content** delete content in *Site Address* and click on display button, select site address from the list (the one created in step 10 of Prerequisites). Once is done click on **Publish**
+
+        ![InvokeDesignAgentFlow](2.2_02-Invoke-Agent-Flow.png)
+
+   - **Save Design to SharePoint v1** – SharePoint, Outlook connections
+         
+        ##### 2.2 Edit the Flow
+        ![SaveDesigntoSharepoint_v1](2.2_03-SaveDesigntoSharepoint_v1-Flow.png)
+
+        Click on **Create file** and **Get file properties**
+
+        ![SaveDesigntoSharepoint_v1](2.2_04-SaveDesigntoSharepoint_v1-Flow.png)
+
+        In the action **Create file** delete content in *Site Address* and click on display button, select site address from the list (the one created in step 10 of Prerequisites). Delete content in *Folder Path*, click on folder icon and select Generated Architectures folder. 
+        In the action **Get file properties** delete content in *Site Address* and click on display button, select site address from the list (the one created in step 10 of Prerequisites). Delete content in *Library Name*, click on display button and select *Document*. Once is done click on **Publish**
+
+        ![SaveDesigntoSharepoint_v1](2.2_05-SaveDesigntoSharepoint_v1-Flow.png)
+
+3. Review all flows status = **Published**
+![ConnectionReferences](2.2_06-SaveDesigntoSharepoint_v1-Flow.png)
 
 ===
 
-## Module 3: Knowledge Base Setup
+## Module 3: Knowledge Base Setup (1 minute)
 
-The Design Agent uses a knowledge file to ensure output structure matches deployment requirements.
+The Intake Agent and Design Agent use a knowledge file to ensure output structure matches deployment requirements.
 
 ### Step 3.1: Navigate to Knowledge (30 seconds)
 
-1. In Copilot Studio, open the **Application Design Agent**
+1. In Copilot Studio, open the **App Intake AGent v1.3.4** from the list of Agents
 2. Click the **Knowledge** tab in the top navigation
 
-### Step 3.2: Review Existing Knowledge (Last time 1/12/2026 12:00 pm 50 minutes)
+![IntakeAgentKnowledge](3.1_00-IntakeAgentKnowledge.png)
 
-The agent should have:
+> ℹ️ The knowledge is **not mandatory**. If absent, the agent proceeds using the data points and instructions.
 
-| Knowledge Source | Status |
-|------------------|--------|
-| Azure Guidance.txt | ✅ Ready |
+3. Open the **Application Design Agent** from the list of Agents
+4. Click the **Knowledge** tab in the top navigation
+
+![DesignAGentKnowledge](3.1_01-IntakeAgentKnowledge.png)
 
 > 📄 **Knowledge File Purpose:** This text-based file guides the agent to produce resource configuration tables in a format compatible with the deployment agent.
 
@@ -329,38 +435,109 @@ Web Search: Disabled (Recommended for secure environments)
 
 ===
 
-## Module 4: Using the Design Agent (Interactive Mode)
+## Module 4: Testing the Agents (25 minutes)
+### 4.1 Intake Agent
+1. Select the App Intake Agent v1.3.4 from the list of Agents
+
+![TestingIntakeAgent](4.1_00-TestIntakeAgent.png)
+
+2. Start with:
+
+   "Here is the architectural document for 'SmartLogistics'. Please review it and only ask what's missing."
+   Before send the prompt attached the App Overview - Smartlogistic.pdf file
+
+   ![TestingIntakeAgent](4.1_01-TestIntakeAgent.png)
+
+  
+   Other prompts: 
+      "Begin intake. I have an architecture document to upload."
+
+      "Create a migration intake report for 'CRM Gateway' and email it to the migration team when done."
+
+   
+
+#### Conversation Flow & Behavior
+
+   The agent follows these **core instructions**:
+   *   **Greet and start** the conversation.
+   *   During the introduction, **request the architectural document** for the application.
+   *   If provided, **review its contents** and **only ask** questions **not answered** in the document, based on targeted data points for Azure migration.
+   *   If not available, proceed to ask **up to 20 targeted questions** to gather essential data.
+   *   **Collect details** about application infrastructure, dependencies, and **timeline dependencies in the next 6–12 months**.
+   *   **Do not ask** about **migration timeline** (owners cannot decide it).
+   *   Use these **data points** (see below) and ensure they are included in the **final report**.
+   *   Maintain a **friendly and efficient** conversation, respecting the owner’s time.
+   *   **Reference** the attached **questionnaire** (if configured) as a knowledge source for questions or report compilation.
+   *   **Never list** all questions upfront; ask **one by one**.
+   *   **Never ask** about **Treatment type** or **Complexity**; the agent **assesses** them based on collected data and presents them with justification.
+   *   For **region**, ask **where the app is hosted** and **where users are**, with **user count ranges**.
+   *   Always collect or extract **volumes**; if unknown/not in the doc, mark as **Missing Info** (avoid “large/small”).
+   *   At the end, create a **filterable table** with all data points and **notes**, **grouped by categories**, visually emphasized where helpful.
+   *   After the table, ask if the user is ready to **send intake data to the migration team**; if **Yes**, **convert to JSON** and **send via email**.
+#### Data Points Captured & Report Structure
+
+   **Categories & Fields** (extracted/asked; displayed in a filterable table with a **Notes** column):
+   *   **📋 Overview**
+      *   Application overview (max 10 lines)
+      *   Business Criticality
+      *   Customer Impact
+      *   Assessed complexity (**0–100**) _(assessed by agent)_
+      *   Suggested treatment _(refactor, rehost, replatform, rearchitect — minimal effort, max value; assessed by agent)_
+   *   **🔐 Data & Privacy**
+      *   Data Privacy requirements
+      *   Data Volume
+      *   Real-time data streaming requirements
+      *   Batch data processing requirements
+   *   **🧩 Architecture & Integrations**
+      *   Current Tech / Integrations (internal & external)
+      *   Dependency on other apps/data sources
+      *   Service Integration Partners
+      *   Automation
+   *   **🌐 Environment & Regions**
+      *   Regions/Locations (hosting & users; user count ranges)
+      *   Network Access details
+      *   Identity Providers
+      *   Number of Environments and details
+   *   **📅 Release & Dependencies**
+      *   Release dependencies on corporate release cycle
+      *   Timeline dependencies (next **6–12 months**)
+   The final table is filterable/sortable in-channel, with **bold headers** and optional **icons** for quick scanning.
+
+
+### 4.2 Design Agent (Interactive Mode)
 
 The Design Agent supports two operational modes: **Interactive Mode** (covered in this module) and **Autonomous Mode** (covered in Module 5). This module focuses on the interactive conversation-based approach.
 
-### Step 4.1: Test the Agent
+#### Step 4.1: Test the Agent
 
-1. In the agent overview, locate the **Test your agent** panel on the right side
-2. Review the agent's welcome message:
+1. Select the **Application Design Agent** from the list of Agents
+![TestingDesignAgent](4.2_00-TestingDesignAgent.png)
 
-```
-**Welcome, I'm the Application Design Agent**
-Attach an application intake document (summary, PRD, or notes), and I’ll generate a complete Azure target architecture document.
-*The document includes:*
-IntroductionArchitecture overviewFive structured views:Logical ViewHigh-Level Technical ViewDetailed Infrastructure ViewNetworking ViewObservability ViewAlignment to the Azure Well-Architected Framework and SCF controlsA deploy-ready Azure resource configuration tablePlease upload the Intake requirements document to get started
+2. In the agent overview, locate the **Test your agent** panel on the right side
+3. Review the agent's welcome message:
+![TestingDesignAgent](4.2_01-TestingDesignAgent.png)
 
+3. In the test panel, type one of the trigger phrases:
+   ```
+   Generate target Azure architecture details for the attached Application
+   ```
+4. Enter the application name when prompted:
+   ```
+   SmartLogistics
+   ```
+![alt text](4.2_01-TestingDesignAgent.png)
 
-Suggested Trigger Phrase Line:
-1. Generates a target Azure architecture design document for a given application.
-2. Generate and save target Azure architecture
-```
+4. **Upload the intake document:**
+   - Click **Browse** or drag and drop your file *Smar Logistics-Intake-2025-12-02.md*
+   - Supported formats: PDF, DOCX, TXT
+   - Select your intake document
+   - Click **Open**
 
-### Step 4.2: Prepare Your Intake Document
+   ![TestDesignAgent](4.1_00-TestDesignAgent.png)
 
-Before using the agent, ensure your intake document contains:
+5. Wait for the agent to process (Average duration: ~71 seconds)
 
-- [ ] Application name and description
-- [ ] Business requirements
-- [ ] Technical requirements
-- [ ] Compliance requirements (GDPR, CCPA, etc.)
-- [ ] Performance and scalability needs
-- [ ] Integration requirements
-- [ ] Security requirements
+6. Don't move from the window until the response is completed
 
 **Sample Intake Document Structure:**
 
@@ -379,27 +556,7 @@ Requirements:
 
 ### Step 4.3: Generate Architecture Document
 
-1. In the test panel, type one of the trigger phrases:
-   ```
-   Generate target Azure architecture details for the attached Application
-   ```
 
-2. When prompted, click **Add content** (📎 attachment icon)
-
-3. **Upload the intake document:**
-   - Click **Browse** or drag and drop your file
-   - Supported formats: PDF, DOCX, TXT
-   - Select your intake document
-   - Click **Open**
-
-4. Enter the application name when prompted:
-   ```
-   SmartLogistics
-   ```
-
-5. Wait for the agent to process (Average duration: ~71 seconds)
-
-6. Don't move from the window until the response is completed
 
 ### Step 4.4: Review Generated Output
 
@@ -479,46 +636,27 @@ In Autonomous Mode, the agent:
 
 ### Step 5.2: Configure SharePoint Intake Folder
 
-#### 5.2.1 Create the Folder Structure
-
-Set up the following folder structure in your SharePoint document library:
-
-```
-📁 Design Agent Documents
-├── 📁 Intake                    ← Upload intake documents here
-│   └── 📄 [AppName]-Intake.pdf
-├── 📁 Generated Architectures   ← Output documents stored here
-│   └── 📄 [AppName]-Target-Azure-Architecture-v1.0.md
-└── 📁 Archive                   ← Processed intake documents moved here
-```
-
-#### 5.2.2 Configure SharePoint Site Settings
-
-1. Navigate to your SharePoint site
-2. Go to **Site Settings** > **Site Contents**
-3. Open the **Design Agent Documents** library
-4. Click **⚙️ Settings** > **Library settings**
-5. Under **Columns**, ensure the following metadata columns exist:
-
-| Column Name | Type | Purpose |
-|-------------|------|--------|
-| Application Name | Single line of text | Stores extracted app name |
-| Processing Status | Choice | Pending, Processing, Completed, Failed |
-| Processed Date | Date and Time | Timestamp of processing |
-| Generated Document | Hyperlink | Link to output document |
-
-### Step 5.3: Configure the SharePoint Trigger
-
-#### 5.3.1 Access Triggers Configuration
+#### 5.2.1 Access Triggers Configuration
 
 1. In Copilot Studio, open the **Application Design Agent**
 2. In the agent overview, locate the **Triggers** section
 3. Click **+ Add trigger**
 
-#### 5.3.2 Set Up SharePoint File Upload Trigger
+![SharepointTrigger](5.2_00-SharepointTrigger.png)
 
-1. Select **When a file is created (SharePoint)**
+#### 5.2.2 Set Up SharePoint File Upload Trigger
+
+1. Select **When an item is created** and click **Next**
+
+![SharepointTrigger](5.2_01-SharepointTrigger.png)
+
+2. Review the green checks in the apps and Click **Next**
+
+![SharepointTrigger](5.2_02-SharepointTrigger.png)
+
 2. Configure the trigger settings:
+
+![SharepointTrigger](5.2_03-SharepointTrigger.png)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
