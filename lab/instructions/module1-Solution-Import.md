@@ -1,107 +1,74 @@
 # Module 1: Solution Import (10 minutes)
 
 ## Step 1.1: Access Copilot Studio
+## Module 1: Solution Import (10 minutes)
+In this module we'll import the solutions to present in this Lab
+   - **Intake Agent**
+   - **Design Agent**
 
-1. Open the Edge browser and navigate to +++https://copilotstudio.microsoft.com+++ and login with the following suggested Microsoft 365 work or school account:
-
-**Username: +++@lab.CloudPortalCredential(User1).Username+++**
-
-For the **user's password**, provide the following value:
-
-**Password: +++@lab.CloudPortalCredential(User1).Password+++**
-
-> [!TIP]
-> If the login UI prompts you for the user's **temporary password**, provide the following value:
-> 
-> **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
-
-2. Wait between 10 and 15 seconds for the process to configure your personal developer environment to start. You will see a dialog informing you about the ongoing process of creating your personal environment.
-
-![The dialog informing about the developer environment creation.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/mcs-creating-environment-01.png)
-
-3. If this is the very first time you run Copilot Studio you will need to select your country and to select the **Get Started** button.
-
-![The web page to start using Copilot Studio. You need to provide your country, to choose whether you want to receive messages from Microsoft about offerts, and to select to "Get Started".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/mcs-get-started-01.png)
-
-4. Skip, or go through, the "Welcome to Copilot Studio!" dialog window
-
-## Step 1.2: Navigate to Solutions
-
-1. Click on **Create** on the top right 
-
-![Refresh](1.2_00-Navigate-to-Solutions.png)
-
-2. In the left navigation pane, click on **Solutions**
-> [!TIP]
-> If Solutions is not visible, click **More** (•••) to expand the menu
-
-## Step 1.3: Import the Solution
-
-![Refresh](1.3_00-Import-solutions.png)
+We'll access to Copilot Studio to Import the Solutions, then we'll review the Settings of the imported
 
 
-### Step 1.3.1: Import Intake agent
+### Step 1.1: Access Copilot Studio and Import Solutions
 
-1. Click **Import solution** from the command bar
-2. Click **Browse** select the Design Agent solution package (`AIMigrateIntakeAgent_1_0_0_7.zip` file)
+1. Open New Tab in the Edge browser
+2. Navigate to +++https://copilotstudio.microsoft.com+++
+3. Choose United States from the list of country/region
+4. Don't Mark "I will receive information, tips, and offers about Microsoft Copilot Studio" checkbox
+5. Click **Get Started**
+6. Skip the Welcome window
+7. Click on three dots on the top right
+8. Click **X Cancel agent creation**
+9. Click **Yes, continue**
 
-![Browse](1.3.1_00-Import-Intake-Agent-Solution.png)
+Now we start the process to import the Solution packages
+Let's start with the AIMigrateIntakeAgent package
 
-3. Click **Open**
-4. Click **Next**
-5. Click **Next**
-6. When green check is in all services then click **Import**
+10. On the left ribbon click on the three dots if don't see the **Solutions** icon
+11. Click on **Solutions** (New tab is open in the Edge browser)
+12. Click **Import Solution** from the command bar
+13. Click **Browse** to select the solution to import
+14. Select the zip file AIMigrateIntakeAgent_1_0_0_7.zip solution package
+15. Click **Open**
+16. Click **Next**
+17. Click **Next**
+18. When green checks are in all services then click **Import**
 
-![Import](1.3.1_01-Import-Intake-Agent-Solution.png)
+Let's continue importing the AIMigrateDesignAgent_1_0_0_11 package
+Execute the above steps 10 to 13
+19. Select the zip file AIMigrateDesignAgent_1_0_0_11.zip solution package
+20. Click **Open**
+21. Click **Next**
+22. Click **Next**
+23. When green checks are in all services then click **Import**
 
-### Step 1.3.2: Import Design agent
+ This dialog when import the solution packages confirms the solution package is imported successfully with warnings
 
-1. Click **Import solution** from the command bar
-2. Click **Browse** select the Design Agent solution package (`AIMigrateDesignAgent_1_0_0_9.zip` file)
-
-![Browse](1.3.2_00-Import-Design-Agent-Solution.png)
-
-3. Click **Open**
-4. Click **Next**
-5. Click **Next**
-6. When green check is in all services then click **Import**
-
-![Import](1.3.2_01-Import-Design-Agent-Solution.png)
-
-
-**5. Wait until the solutions are imported**
-
-![Import](1.3_01-Import-Solutions.png)
-
-> [!TIP]
-> Refresh the browser if don't see the agents
-
-## Step 1.4: Configure Import Settings
-### Step 1.4.1: Configure Intake Agent Settings
-1. Select the Intake Agent
-2. Click on **Copilot Studio icon**
-
-![IntakeAgentSettings](1.4.1_00-Intake-Agent-Settings.png)
-
-2. On the left menu click on Agents
-3. Click on **Tools** on the top ribbon
+### Step 1.2: Update Imported Agents
+In this step we are going to update some configuration in the Agents.
+Let's start with the AI-Migrate_Intake_Agent
+#### Step 1.2.1: Update Intake Agent Tools
+1. In the Solution window from the prior Step 1.1, click on **AI-Migrate-Intake-Agent**
+2. On the left menu, click **Agents (2)**
+3. Validate there are 2 agents (App Intake Agent v1.3.4 and Azure Architecture Exper v0.6.1) and click on **App Intake Agent v1.3.4**
+4. Click on **Tools** on the top ribbon
+5. Click on **Sen and Email** connector Name
 
 ![Outlook](1.4.1_02-Intake-Agent-Outlook.png)
 
-4. Scroll down to **Inputs** and in Input Name **To**, **Value field** replace it by **Username: +++@lab.CloudPortalCredential(User1).Username+++**
-
-5. **Save**
+6. Click on **Inputs** on the left ribbon
+7. Scroll down to **Inputs** 
+8. Replace the **Value** field content in the Input **To** by your username provided for this Lab **Username: +++@lab.CloudPortalCredential(User1).Username+++**
+9. **Save**
 
 ![Outlook](1.4.1_03-Intake-Agent-Outlook.png)
 
-### Step 1.4.2: Configure Design Agent Settings
+Let's continues with the App Intake AGent v1.3.4 Agent. Don't need to close this window
 
-1. Once imported, locate **Application Design Agent** in your Agents list
-2. Click on the Agent name
-3. Verify the agent overview displays correctly:
+#### Step 1.2.2: Configure Design Agent Settings
 
+1. Keep the coursor on the Agent icon on the left ribbon to show the list of the Agents and click on **Application Design Agent**
 ![DesignAgent](1.4.2_00-Design-Agent.png)
-
+2. Verify the agent overview displays correctly in the Test Agent window:
 **Expected Overview Screen:**
-
 ![Welcome](008-Welcome-message.png)
