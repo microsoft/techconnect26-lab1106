@@ -116,9 +116,9 @@ You can now move to Module 9 - Appendix: Troubleshooting
 
 ===
 
-## Lab Complete
+## Congratulations! 
 
-Congratulations! You have successfully completed the entire Design Agent lab. You are now able to:
+You have successfully completed the entire Design Agent lab. You are now able to:
 
 ✅ Import and configure the Design Agent solution  
 ✅ Establish required connections for SharePoint and email  
