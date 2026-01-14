@@ -8,17 +8,18 @@
 
 2. Start with:
 
-`"Here is the architectural document for 'SmartLogistics'. Please review it and only ask what's missing."`
+Attach the **SmartlogisticAppsOverview.pdf** file from the Desktop, then type the following:
 
-Before send the prompt attached the App Overview - Smartlogistic.pdf file
+`Here is the architectural document for 'SmartLogistics'. Please review it and only ask what's missing.`
+
 
 ![TestingIntakeAgent](4.1_01-TestIntakeAgent.png)
 
 Other prompts:
 
-`"Begin intake. I have an architecture document to upload."`
+`Begin intake. I have an architecture document to upload`
 
-`"Create a migration intake report for 'CRM Gateway' and email it to the migration team when done."`
+`Create a migration intake report for 'CRM Gateway' and email it to the migration team when done`
 
 ### Conversation Flow & Behavior
 
@@ -82,17 +83,17 @@ The Design Agent supports two operational modes: **Interactive Mode** (covered i
 3. Review the agent's welcome message:
 ![TestingDesignAgent](4.2_01-TestingDesignAgent.png)
 
-3. In the test panel, type one of the trigger phrases:
-   ```
-   Generate target Azure architecture details for the attached Application
-   ```
-4. Enter the application name when prompted:
-   ```
-   SmartLogistics
-   ```
+4. In the test panel, type one of the trigger phrases:
+
+`Generate target Azure architecture details for the attached Application`
+
+5. Enter the application name when prompted:
+
+`SmartLogistics`
+
 ![alt text](4.2_01-TestingDesignAgent.png)
 
-4. **Upload the intake document:**
+6. **Upload the intake document:**
    - Click **Browse** or drag and drop your file *Smar Logistics-Intake-2025-12-02.md*
    - Supported formats: PDF, DOCX, TXT
    - Select your intake document
@@ -100,9 +101,9 @@ The Design Agent supports two operational modes: **Interactive Mode** (covered i
 
    ![TestDesignAgent](4.1_00-TestDesignAgent.png)
 
-5. Wait for the agent to process (Average duration: ~71 seconds)
+7. Wait for the agent to process (Average duration: ~71 seconds)
 
-6. Don't move from the window until the response is completed
+8. Don't move from the window until the response is completed
 
 **Sample Intake Document Structure:**
 
