@@ -62,15 +62,15 @@ For the **user's password**, provide the following value:
 
 8. Click on **Create site**
 9. Keep the **Add members** box blank and click on **Finish**
-10. Create the Folder Structure 
+10. Create the Folder Structure
  ```
 📁 Documents
-├── 📁 +++Intake-Documents+++
+├── 📁 Intake-Documents
 │   └── 📄 [AppName]-Intake.pdf
-├── 📁 +++Architecture-Documents+++
+├── 📁 Architecture-Documents
 │   └── 📄 [AppName]-Target-Azure-Architecture-v1.0.md
 ```
 
-On the left menu click on **Document**, click on **+ Create or upload**, click on **Folder**. Type Name of the folder
+On the left menu click on **Document**, click on **+ Create or upload**, click on **Folder**. Type Name of the folder (+++Intake-Documents+++ or +++Architecture-Documents+++)
    
 ![Folders](0.2_10-Create-Folders.png)
