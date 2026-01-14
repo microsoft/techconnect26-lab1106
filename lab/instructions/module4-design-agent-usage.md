@@ -8,16 +8,17 @@
 
 2. Start with:
 
-   "Here is the architectural document for 'SmartLogistics'. Please review it and only ask what's missing."
-   Before send the prompt attached the App Overview - Smartlogistic.pdf file
+`"Here is the architectural document for 'SmartLogistics'. Please review it and only ask what's missing."`
 
-   ![TestingIntakeAgent](4.1_01-TestIntakeAgent.png)
+Before send the prompt attached the App Overview - Smartlogistic.pdf file
 
-  
-   Other prompts: 
-      "Begin intake. I have an architecture document to upload."
+![TestingIntakeAgent](4.1_01-TestIntakeAgent.png)
 
-      "Create a migration intake report for 'CRM Gateway' and email it to the migration team when done."
+Other prompts:
+
+`"Begin intake. I have an architecture document to upload."`
+
+`"Create a migration intake report for 'CRM Gateway' and email it to the migration team when done."`
 
 ### Conversation Flow & Behavior
 
