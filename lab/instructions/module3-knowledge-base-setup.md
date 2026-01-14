@@ -21,4 +21,4 @@ The Intake Agent and Design Agent use a knowledge file to ensure output structur
 > 📄 **Knowledge File Purpose:** This text-based file guides the agent to produce resource configuration tables in a format compatible with the deployment agent.
 
 Congratulations, you've completed all steps of this module.
-You can move to Module 4-design Agent usage
+You can move to Module 4-Design Agent usage
