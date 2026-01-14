@@ -94,7 +94,7 @@ The Design Agent supports two operational modes: **Interactive Mode** (covered i
 ![alt text](4.2_01-TestingDesignAgent.png)
 
 6. **Upload the intake document:**
-   - Click **Browse** or drag and drop your file *Smar Logistics-Intake-2025-12-02.md*
+   - Click **Browse** or drag and drop your file *Smart Logistics-Intake-2025-12-02.md*
    - Supported formats: PDF, DOCX, TXT
    - Select your intake document
    - Click **Open**
