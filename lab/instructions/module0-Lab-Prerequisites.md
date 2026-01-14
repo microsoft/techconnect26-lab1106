@@ -1,19 +1,5 @@
 # Prerequisites (10 minutes)
 
-## Required Access
-
-- [ ] Microsoft 365 account with Copilot Studio license
-- [ ] Power Platform environment with Dataverse
-- [ ] SharePoint site for document storage
-- [ ] Power Automate premium connectors access
-- [ ] GPT-5 Reasoning (Preview) model access in Copilot Studio
-
-## Required Files
-
-- [ ] Design Agent solution package (`.zip` file)
-- [ ] Azure Resource Table Sample.txt (Knowledge file)
-- [ ] Sample intake document (PDF or Word format)
-
 ## Environment Setup Checklist
 
 | Component | Status |
