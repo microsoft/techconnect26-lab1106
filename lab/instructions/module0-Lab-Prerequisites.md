@@ -44,13 +44,13 @@ Let's create the Folder Structure for the Automate part of this Lab:
 21. Navigate to the left menu and click on **Documents** 
 22. On the top right Click **Create or upload**
 23. Click **Folder** 
-24. Name it **Intake-Documents** (Please don't use different name)
+24. Name it +++Intake-Documents+++ (Please don't use different name)
 25. Click **Create**
 ![Folders](0.2_10-Create-Folders.png)
 
 26. On the top right Click **Create or upload** again
 27. Click **Folder** 
-28. Name it **Architecture-Documents** (Please don't use different name)
+28. Name it +++Architecture-Documents+++ (Please don't use different name)
 29. Click **Create**
 
   

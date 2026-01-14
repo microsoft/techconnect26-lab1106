@@ -22,22 +22,22 @@ Wait for your Development Environment to be created
 9. Click **Yes, continue**
 
 Now we start the process to import the Solution packages
-Let's start with the AIMigrateIntakeAgent package
+Let's start with the **IntakeAgent_1_0_0_7** package
 
 10. On the left ribbon click on the three dots if don't see the **Solutions** icon
 11.  Click on **Solutions** (New tab is open in the Edge browser)
 12.  Click **Import Solution** from the command bar
 13.  Click **Browse** to select the solution to import
-14.  Select the zip file IntakeAgent_1_0_0_7.zip solution package
+14.  Select the zip file **IntakeAgent_1_0_0_7.zip** solution package
 15. Click **Open**
 16. Click **Next**
 17. Click **Next**
 18. When green checks are in all services then click **Import**
 
-Let's continue importing the DesignAgent_1_0_0_11 package
+Let's continue importing the **DesignAgent_1_0_0_11** package
 Execute the prior steps 12 and 13 again
 
-19. Select the zip file DesignAgent_1_0_0_11.zip solution package 
+19. Select the zip file **DesignAgent_1_0_0_11.zip** solution package
 20. Click **Open**
 21. Click **Next**
 22. Click **Next**
