@@ -77,7 +77,7 @@ The Design Agent requires the following connections:
 
       1. In the action card, clear the content in _Site Address_ input by clicking the **X** near the right side of the input box.
 
-      2. Click on the display button (**˅**), and select the SharePoint site address from the list, the you had created in the last module.
+      2. Click on the display button (**˅**), and select the SharePoint site address from the list, the you had created.
 
          ![InvokeDesignAgentFlow](2.2_01-Invoke-Agent-Flow.png)
 
@@ -87,7 +87,7 @@ The Design Agent requires the following connections:
 
    3. On the flow Designer page, click on the **Get file content** action to expand it.
 
-      1. In the action card, follow the same procedure as the first sub-step in the previous step, and updat ethe _Site Address_ to the SharePoint site you had created in the last module.
+      1. In the action card, follow the same procedure as the previous step, and update the _Site Address_ to the SharePoint site you had created.
          ![InvokeDesignAgentFlow](2.2_02-Invoke-Agent-Flow.png)
 
    4. Once is done click on **Publish** button on the top right corner of the Designer page.
@@ -95,7 +95,7 @@ The Design Agent requires the following connections:
 3. **Save Design to SharePoint v1** flow
 
    1. Select **Flows** in the left sidebar in Copilot Studio. In the page that opens up, hover over the row for **Save Design to SharePoint v1**, click the **elipses (...)** to open a context menu and select **Edit agent flow** option:
-      ![SaveDesigntoSharepoint_v1](2.2_01-SaveDesigntoSharepoint_v1-Flow.png)
+      ![SaveDesigntoSharePoint_v1](2.2_01-SaveDesigntoSharepoint_v1-Flow.png)
 
    2. On the flow Designer page, click on **Create file** action to exapand it.
 
