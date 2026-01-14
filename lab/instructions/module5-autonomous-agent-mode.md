@@ -74,24 +74,15 @@ In Autonomous Mode, the agent:
 
 ![SharepointTrigger](5.2_03-SharepointTrigger.png)
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  TRIGGER CONFIGURATION                                           │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  Trigger Type:     When a file is created in SharePoint         │
-│                                                                  │
-│  Site Address:     https://[tenant].sharepoint.com/sites/       │
-│                    DesignAgentSite                              │
-│                                                                  │
-│  Library Name:     Design Agent Documents                       │
-│                                                                  │
-│  Folder Path:      /Intake                                      │
-│                                                                  │
-│  File Filter:      *.pdf, *.docx, *.txt                        │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+Trigger Configuration
+
+| Type | Value |
+| ---- | ----- |
+| Trigger Type | When a file is created in SharePoint |
+| Site Address | https://lodsprodmca.sharepoint.com/sites/usercreatedsite |
+| Library Name | Documents |
+| Folder Path | /Intake-Documents |
+| File Filter | *.pdf, *.docx, *.txt |
 
 3. Click **Save**
 
@@ -139,7 +130,7 @@ Once triggered, the agent:
 The generated document is automatically saved to SharePoint:
 
 ```
-Output Location: /Design Agent Documents/Generated Architectures/
+Output Location: /Documents/Architectures-Documents/
 File Name:       [AppName]-Target-Azure-Architecture-v1.0.md
 Format:          Markdown with embedded Mermaid diagrams
 ```

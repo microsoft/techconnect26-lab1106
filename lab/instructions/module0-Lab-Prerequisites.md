@@ -1,19 +1,5 @@
 # Prerequisites (10 minutes)
 
-## Required Access
-
-- [ ] Microsoft 365 account with Copilot Studio license
-- [ ] Power Platform environment with Dataverse
-- [ ] SharePoint site for document storage
-- [ ] Power Automate premium connectors access
-- [ ] GPT-5 Reasoning (Preview) model access in Copilot Studio
-
-## Required Files
-
-- [ ] Design Agent solution package (`.zip` file)
-- [ ] Azure Resource Table Sample.txt (Knowledge file)
-- [ ] Sample intake document (PDF or Word format)
-
 ## Environment Setup Checklist
 
 | Component | Status |
@@ -27,9 +13,9 @@
 1. Open the Edge browser
 2. Click on waffle icon first, then click on Microosft 365 and click Sign in in the top right:
 
-![Browser](<0.1_00-Sign-in-Office 365.png>)
+![Browser](0.1_00-Sign-in-Office365.png)
 
-![Office365](<0.1_02-Sign-in-Office 365.png>)
+![Office365](0.1_02-Sign-in-Office365.png)
 
 **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
@@ -60,17 +46,17 @@ For the **user's password**, provide the following value:
 
 ![SiteName](0.2_07-Create-Site.png)
 
-8. Click on **Create**
-9. Let **Add members** box in blak and click on **Finish**
-10. Create the Folder Structure 
+8. Click on **Create site**
+9. Keep the **Add members** box blank and click on **Finish**
+10. Create the Folder Structure
  ```
 📁 Documents
-├── 📁 Intake-Documents                   
+├── 📁 Intake-Documents
 │   └── 📄 [AppName]-Intake.pdf
-├── 📁 Architecture-Documents   
+├── 📁 Architecture-Documents
 │   └── 📄 [AppName]-Target-Azure-Architecture-v1.0.md
 ```
 
-On the left menu click on **Document**, click on **+ Create or upload**, click on **Folder**. Type Name of the folder
+On the left menu click on **Document**, click on **+ Create or upload**, click on **Folder**. Type Name of the folder (+++Intake-Documents+++ or +++Architecture-Documents+++)
    
 ![Folders](0.2_10-Create-Folders.png)
