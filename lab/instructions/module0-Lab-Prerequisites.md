@@ -60,14 +60,14 @@ For the **user's password**, provide the following value:
 
 ![SiteName](0.2_07-Create-Site.png)
 
-8. Click on **Create**
-9. Let **Add members** box in blak and click on **Finish**
+8. Click on **Create site**
+9. Keep the **Add members** box blank and click on **Finish**
 10. Create the Folder Structure 
  ```
 📁 Documents
-├── 📁 Intake-Documents                   
+├── 📁 +++Intake-Documents+++
 │   └── 📄 [AppName]-Intake.pdf
-├── 📁 Architecture-Documents   
+├── 📁 +++Architecture-Documents+++
 │   └── 📄 [AppName]-Target-Azure-Architecture-v1.0.md
 ```
 
