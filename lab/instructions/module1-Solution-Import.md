@@ -1,13 +1,14 @@
 # Module 1: Solution Import (10 minutes)
 
 ## Step 1.1: Access Copilot Studio
+
 ## Module 1: Solution Import (10 minutes)
+
 In this module we'll import the solutions to present in this Lab
    - **Intake Agent**
    - **Design Agent**
 
 We'll access to Copilot Studio to Import the Solutions, then we'll review the Settings of the imported
-
 
 ### Step 1.1: Access Copilot Studio and Import Solutions
 
@@ -36,18 +37,22 @@ Let's start with the AIMigrateIntakeAgent package
 
 Let's continue importing the AIMigrateDesignAgent_1_0_0_11 package
 Execute the above steps 10 to 13
-19. Select the zip file AIMigrateDesignAgent_1_0_0_11.zip solution package
+
+19. Select the zip file AIMigrateDesignAgent_1_0_0_11.zip solution package 
 20. Click **Open**
 21. Click **Next**
 22. Click **Next**
 23. When green checks are in all services then click **Import**
 
- This dialog when import the solution packages confirms the solution package is imported successfully with warnings
+This dialog when import the solution packages confirms the solution package is imported successfully with warnings
 
 ### Step 1.2: Update Imported Agents
+
 In this step we are going to update some configuration in the Agents.
 Let's start with the AI-Migrate_Intake_Agent
+
 #### Step 1.2.1: Update Intake Agent Tools
+
 1. In the Solution window from the prior Step 1.1, click on **AI-Migrate-Intake-Agent**
 2. On the left menu, click **Agents (2)**
 3. Validate there are 2 agents (App Intake Agent v1.3.4 and Azure Architecture Exper v0.6.1) and click on **App Intake Agent v1.3.4**
@@ -57,7 +62,7 @@ Let's start with the AI-Migrate_Intake_Agent
 ![Outlook](1.4.1_02-Intake-Agent-Outlook.png)
 
 6. Click on **Inputs** on the left ribbon
-7. Scroll down to **Inputs** 
+7. Scroll down to **Inputs**
 8. Replace the **Value** field content in the Input **To** by your username provided for this Lab **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 9. **Save**
 
