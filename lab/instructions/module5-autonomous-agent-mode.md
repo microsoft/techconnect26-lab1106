@@ -74,24 +74,15 @@ In Autonomous Mode, the agent:
 
 ![SharepointTrigger](5.2_03-SharepointTrigger.png)
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  TRIGGER CONFIGURATION                                           │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  Trigger Type:     When a file is created in SharePoint         │
-│                                                                  │
-│  Site Address:     https://[tenant].sharepoint.com/sites/       │
-│                    DesignAgentSite                              │
-│                                                                  │
-│  Library Name:     Design Agent Documents                       │
-│                                                                  │
-│  Folder Path:      /Intake                                      │
-│                                                                  │
-│  File Filter:      *.pdf, *.docx, *.txt                        │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+Trigger Configuration
+
+| Type | Value |
+| ---- | ----- |
+| Trigger Type | When a file is created in SharePoint |
+| Site Address | https://lodsprodmca.sharepoint.com/sites/usercreatedsite |
+| Library Name | Documents |
+| Folder Path | /Intake-Documents |
+| File Filter | *.pdf, *.docx, *.txt |
 
 3. Click **Save**
 
