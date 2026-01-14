@@ -130,7 +130,7 @@ Once triggered, the agent:
 The generated document is automatically saved to SharePoint:
 
 ```
-Output Location: /Design Agent Documents/Generated Architectures/
+Output Location: /Documents/Architectures-Documents/
 File Name:       [AppName]-Target-Azure-Architecture-v1.0.md
 Format:          Markdown with embedded Mermaid diagrams
 ```
