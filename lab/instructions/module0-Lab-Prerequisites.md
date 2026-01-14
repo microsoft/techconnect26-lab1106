@@ -27,9 +27,9 @@
 1. Open the Edge browser
 2. Click on waffle icon first, then click on Microosft 365 and click Sign in in the top right:
 
-![Browser](<0.1_00-Sign-in-Office 365.png>)
+![Browser](0.1_00-Sign-in-Office365.png)
 
-![Office365](<0.1_02-Sign-in-Office 365.png>)
+![Office365](0.1_02-Sign-in-Office365.png)
 
 **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
