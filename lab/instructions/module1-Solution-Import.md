@@ -76,4 +76,4 @@ Let's continues with the Application Design Agent. Don't need to close this wind
 2. Verify the agent overview displays correctly in the Test Agent window:
 **Expected Overview Screen:**
 ![Welcome](008-Welcome-message.png)
-3. In the Overview tab on the top, scroll down to Knowledge and verify **Web Search** is Disables
+3. In the Overview tab on the top, scroll down to Knowledge and verify **Web Search** is Disable
