@@ -77,3 +77,6 @@ Let's continues with the Application Design Agent. Don't need to close this wind
 **Expected Overview Screen:**
 ![Welcome](008-Welcome-message.png)
 3. In the Overview tab on the top, scroll down to Knowledge and verify **Web Search** is Disable
+
+Congratulations! All Solutions are imported.
+You can keep open the Edge browser and move to Module 2 - Connection configurataion
