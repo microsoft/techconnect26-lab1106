@@ -85,7 +85,7 @@ The Design Agent supports two operational modes: **Interactive Mode** (covered i
 
 4. In the test panel, type one of the trigger phrases:
 
-`Generate target Azure architecture details for the attached Application`
+`Generate design document for the target Azure architecture of the attached Application`
 
 5. Enter the application name when prompted:
 
