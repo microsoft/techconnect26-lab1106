@@ -1,9 +1,10 @@
 # Prerequisites (10 minutes)
 ### Step 1: SharePoint Site Configuration
-We are going to setup the SahrePoint site required for this Lab. Open the Edge browser in the taskbar or in your desktop
+Let's start this Lab setting the SharePoint site required for this Lab.
+Open the Edge browser in the taskbar or in your desktop
 1. Click on waffle icon on the left
 2. Click on **Microosft 365**
-3. Click Sign in in the top right:
+3. Click **Sign in** in the top right:
 
 ![Browser](0.1_00-Sign-in-Office365.png)
 
