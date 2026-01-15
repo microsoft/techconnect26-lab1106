@@ -13,7 +13,7 @@ Open the Edge browser in the taskbar or in your desktop
 4. Sign in with the username  **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 5. Temporary Access Password (TAP) the following value **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
 
-    ![UserPassword](0.1_02-User-Password.png)
+    ![UserPassword](0.1_05-UserPassword.png)
 
 6. On the left pannel, click on Apps
 7. SharePoint
