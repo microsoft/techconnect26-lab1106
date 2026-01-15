@@ -1,6 +1,6 @@
 # Module 3: Knowledge Base Setup (1 minute)
 
-The Intake Agent and Design Agent use a knowledge file to ensure output structure matches deployment requirements.
+The App Intake Agent and Application Design Agent use a knowledge file to ensure output structure matches deployment requirements.
 
 ## Step 1: App Intake Agent v1.3.4 Knowledge
 
