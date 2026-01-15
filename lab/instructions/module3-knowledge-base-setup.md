@@ -12,7 +12,7 @@ The App Intake Agent and Application Design Agent use a knowledge file to ensure
 
     ![StatusReady](3.1_2-StatusReady.png)
 
-> ℹ️ The knowledge is **not mandatory**. If absent, the agent proceeds using the data points and instructions.
+    > ℹ️ The knowledge is **not mandatory**. If absent, the agent proceeds using the data points and instructions.
 
 ## Step 2: Application Design Agent
 
@@ -24,7 +24,7 @@ The App Intake Agent and Application Design Agent use a knowledge file to ensure
 
     ![StatusReady](3.2_2-StatusReady.png)
 
-> 📄 **Knowledge File Purpose:** This text-based file guides the agent to produce resource configuration tables in a format compatible with the deployment agent.
+    > 📄 **Knowledge File Purpose:** This text-based file guides the agent to produce resource configuration tables in a format compatible with the deployment agent.
 
 Congratulations, you've completed all steps of this module.
 You can move to Module 4-Design Agent usage
