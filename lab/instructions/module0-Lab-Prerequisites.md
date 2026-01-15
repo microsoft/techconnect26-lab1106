@@ -1,5 +1,5 @@
 # Prerequisites (10 minutes)
-### Step 1: SharePoint Site Configuration
+## Step 1: SharePoint Site Configuration
 Let's start this Lab setting the SharePoint site required for this Lab.
 Open the Edge browser in the taskbar or in your desktop
 1. Click on waffle icon on the left
