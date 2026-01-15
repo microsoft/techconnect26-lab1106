@@ -74,5 +74,4 @@ Let's create the Folder Structure for the Automate part of this Lab:
 
     ![CreateDesignFolder](0.1_28-CreateDesignFolder.png)
 
-Congratulations! All Prerequisites sections are configured.
-You can keep open the SharePoint tab in the Edge browser and move to Module 1 - Solution Import
+You can keep open the SharePoint tab in the Edge browser
