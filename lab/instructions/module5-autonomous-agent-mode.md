@@ -1,4 +1,4 @@
-# Module 5: Autonomous Agent Mode
+# Module 5: Autonomous Agent Mode (8 minutes)
 
 The Design Agent can operate as a fully autonomous agent, automatically processing intake documents without user intervention. This mode is ideal for high-volume environments or when architects want to batch-process multiple application assessments.
 In this Lab we'll upload a file into the SharePoint folder *Intake-Documents* and the Agent will create and save the Architecture Design Document into the SharePoint folder *Architecture-Documents*
