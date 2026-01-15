@@ -2,145 +2,78 @@
 
 ## 4.1 Intake Agent
 
-1. Select the App Intake Agent v1.3.4 from the list of Agents
+1. Select **Agents** in the left sidebar, and select **App Intake Agent v1.3.4** from the list of agents
+   ![TestingIntakeAgent](4.1_00-TestIntakeAgent.png)
 
-![TestingIntakeAgent](4.1_00-TestIntakeAgent.png)
+2. Click inside the chat input box in the **Test your agent** panel on the right side of the Agent Overview page.
+   ![TestingIntakeAgent](4.1_01-TestIntakeAgent.png)
 
-2. Start with:
+3. Attach the **SmartlogisticAppsOverview.pdf** file from the Desktop, then either click the text below (to insert it to the input box), or type it yourself, and click the send button (next to attach button):
 
-Attach the **SmartlogisticAppsOverview.pdf** file from the Desktop, then type the following:
+   `Here is the architectural document for 'SmartLogistics'. Please review it and only ask what's missing.`
 
-`Here is the architectural document for 'SmartLogistics'. Please review it and only ask what's missing.`
+   ![TestingIntakeAgent](4.1_02-TestIntakeAgent.png)
 
+   You should see a response similar to this in your chat window:
+   ![TestingIntakeAgent](4.1_03-TestIntakeAgent.png)
 
-![TestingIntakeAgent](4.1_01-TestIntakeAgent.png)
+   Go ahead, and start responding to the questions asked by the Agent (~7-8), and once the Agent has all the information, it would respond with the _SmartLogistics Assessment Summary_ table.
 
-Other prompts:
+Congratulations! The basic testing of the Intake agent is complete. Here are a few additional prompts for you to try:
 
 `Begin intake. I have an architecture document to upload`
 
 `Create a migration intake report for 'CRM Gateway' and email it to the migration team when done`
 
-### Conversation Flow & Behavior
-
-   The agent follows these **core instructions**:
-
-   *   **Greet and start** the conversation.
-   *   During the introduction, **request the architectural document** for the application.
-   *   If provided, **review its contents** and **only ask** questions **not answered** in the document, based on targeted data points for Azure migration.
-   *   If not available, proceed to ask **up to 20 targeted questions** to gather essential data.
-   *   **Collect details** about application infrastructure, dependencies, and **timeline dependencies in the next 6–12 months**.
-   *   **Do not ask** about **migration timeline** (owners cannot decide it).
-   *   Use these **data points** (see below) and ensure they are included in the **final report**.
-   *   Maintain a **friendly and efficient** conversation, respecting the owner’s time.
-   *   **Reference** the attached **questionnaire** (if configured) as a knowledge source for questions or report compilation.
-   *   **Never list** all questions upfront; ask **one by one**.
-   *   **Never ask** about **Treatment type** or **Complexity**; the agent **assesses** them based on collected data and presents them with justification.
-   *   For **region**, ask **where the app is hosted** and **where users are**, with **user count ranges**.
-   *   Always collect or extract **volumes**; if unknown/not in the doc, mark as **Missing Info** (avoid “large/small”).
-   *   At the end, create a **filterable table** with all data points and **notes**, **grouped by categories**, visually emphasized where helpful.
-   *   After the table, ask if the user is ready to **send intake data to the migration team**; if **Yes**, **convert to JSON** and **send via email**.
-
-### Data Points Captured & Report Structure
-
-   **Categories & Fields** (extracted/asked; displayed in a filterable table with a **Notes** column):
-   *   **📋 Overview**
-      *   Application overview (max 10 lines)
-      *   Business Criticality
-      *   Customer Impact
-      *   Assessed complexity (**0–100**) _(assessed by agent)_
-      *   Suggested treatment _(refactor, rehost, replatform, rearchitect — minimal effort, max value; assessed by agent)_
-   *   **🔐 Data & Privacy**
-      *   Data Privacy requirements
-      *   Data Volume
-      *   Real-time data streaming requirements
-      *   Batch data processing requirements
-   *   **🧩 Architecture & Integrations**
-      *   Current Tech / Integrations (internal & external)
-      *   Dependency on other apps/data sources
-      *   Service Integration Partners
-      *   Automation
-   *   **🌐 Environment & Regions**
-      *   Regions/Locations (hosting & users; user count ranges)
-      *   Network Access details
-      *   Identity Providers
-      *   Number of Environments and details
-   *   **📅 Release & Dependencies**
-      *   Release dependencies on corporate release cycle
-      *   Timeline dependencies (next **6–12 months**)
-   The final table is filterable/sortable in-channel, with **bold headers** and optional **icons** for quick scanning.
-
 ## 4.2 Design Agent (Interactive Mode)
 
-The Design Agent supports two operational modes: **Interactive Mode** (covered in this module) and **Autonomous Mode** (covered in Module 5). This module focuses on the interactive conversation-based approach.
+The Design Agent supports two operational modes:
 
-### Step 4.1: Test the Agent
+- **Interactive Mode**
+- **Autonomous Mode**
 
-1. Select the **Application Design Agent** from the list of Agents
-![TestingDesignAgent](4.2_00-TestingDesignAgent.png)
+This module focuses on the **interactive** conversation-based approach, and automomous mode will be covered in the next module.
 
-2. In the agent overview, locate the **Test your agent** panel on the right side
+1. Select **Agents** in the left sidebar, and select the **Application Design Agent** from the list of Agents
+   ![TestingDesignAgent](4.2_00-TestingDesignAgent.png)
+
+2. Click inside the chat input box in the **Test your agent** panel on the right side of the Agent overview page.
 3. Review the agent's welcome message:
-![TestingDesignAgent](4.2_01-TestingDesignAgent.png)
+   ![TestingDesignAgent](4.2_01-TestingDesignAgent.png)
 
-4. In the test panel, type one of the trigger phrases:
+4. In the test panel, select the _Generate a Design Document_ suggested prompt button. Additionaly, You can either click the text below to insert it into the input box, or type it yourself.:
 
-`Generate target Azure architecture details for the attached Application`
+   `Generate design document for the target Azure architecture of the attached Application`
 
 5. Enter the application name when prompted:
 
-`SmartLogistics`
+   `SmartLogistics`
 
-![alt text](4.2_01-TestingDesignAgent.png)
+6. Attach the **Smart Logistics-Intake-2025-12-02.md** file from the Desktop.
 
-6. **Upload the intake document:**
-   - Click **Browse** or drag and drop your file *Smar Logistics-Intake-2025-12-02.md*
-   - Supported formats: PDF, DOCX, TXT
-   - Select your intake document
-   - Click **Open**
+   You should see the agent start responding:
 
-   ![TestDesignAgent](4.1_00-TestDesignAgent.png)
+   ![TestDesignAgent](4.2_02-TestingDesignAgent.png)
 
 7. Wait for the agent to process (Average duration: ~71 seconds)
 
-8. Don't move from the window until the response is completed
+8. Don't move away from the window until the response is completed.
 
-**Sample Intake Document Structure:**
+9. The The agent will generate a comprehensive architecture document with the following structure:
 
-```
-Application Name: SmartLogistics
-Business Criticality: High/Mission Critical
-Regions: Primary - eastus2, Failover - westeurope
-Compliance: GDPR, CCPA
+   ```
+   📦 [AppName] — Target Azure Architecture Details
 
-Requirements:
-- Real-time GPS telemetry processing
-- Integration with SAP ERP
-- Mobile and web client support
-- 24x7 operations support
-```
-
-## Step 4.3: Generate Architecture Document
-
-## Step 4.4: Review Generated Output
-
-The agent will generate a comprehensive architecture document with the following structure:
-
-**Document Structure:**
-
-```
-📦 [AppName] — Target Azure Architecture Details
-
-├── 📋 Introduction
-├── 🔄 Data Flows  
-├── 🏗️ Architecture Overview
-├── 📐 Detailed Description of Each View
-│   ├── 1) Logical View — Conceptual
-│   ├── 2) High-Level Technical View
-│   ├── 3) Detailed Infrastructure View
-│   ├── 4) Networking View
-│   └── 5) Observability View
-├── 📝 Rationales
-├── ⚠️ Limitations
-└── 📊 Azure Resource Table
-```
+   ├── 📋 Introduction
+   ├── 🔄 Data Flows
+   ├── 🏗️ Architecture Overview
+   ├── 📐 Detailed Description of Each View
+   │   ├── 1) Logical View — Conceptual
+   │   ├── 2) High-Level Technical View
+   │   ├── 3) Detailed Infrastructure View
+   │   ├── 4) Networking View
+   │   └── 5) Observability View
+   ├── 📝 Rationales
+   ├── ⚠️ Limitations
+   └── 📊 Azure Resource Table
+   ```

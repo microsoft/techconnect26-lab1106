@@ -22,34 +22,35 @@ Wait for your Development Environment to be created
 9. Click **Yes, continue**
 
 Now we start the process to import the Solution packages
-Let's start with the AIMigrateIntakeAgent package
+Let's start with the **IntakeAgent_1_0_0_7** package
 
 10. On the left ribbon click on the three dots if don't see the **Solutions** icon
 11.  Click on **Solutions** (New tab is open in the Edge browser)
 12.  Click **Import Solution** from the command bar
 13.  Click **Browse** to select the solution to import
-14.  Select the zip file IntakeAgent_1_0_0_7.zip solution package
+14.  Select the zip file **IntakeAgent_1_0_0_7.zip** solution package
 15. Click **Open**
 16. Click **Next**
 17. Click **Next**
 18. When green checks are in all services then click **Import**
 
-Let's continue importing the DesignAgent_1_0_0_11 package
+Let's continue importing the **DesignAgent_1_0_0_11** package
 Execute the prior steps 12 and 13 again
 
-19. Select the zip file DesignAgent_1_0_0_11.zip solution package 
+19. Select the zip file **DesignAgent_1_0_0_11.zip** solution package
 20. Click **Open**
 21. Click **Next**
 22. Click **Next**
 23. When green checks are in all services then click **Import**
 
 Wait for the packages to be imported. Once imported you will see the status change to **Solution "Intake-Agent" imported successfully with warnings**, with the same status for the Design-Agent package.
+
 Note a dialog showing the Solution is imported successfully with warnings. It's ok.
 
 ## Step 1.2: Update Imported Agents
 
 In this step we are going to update some configuration in the Agents.
-Let's start with the AI-Migrate_Intake_Agent
+Let's start with the Intake Agent
 
 ### Step 1.2.1: Update Intake Agent Tools
 
@@ -57,7 +58,7 @@ Let's start with the AI-Migrate_Intake_Agent
 2. On the left menu, click **Agents (2)**
 3. Validate there are 2 agents (App Intake Agent v1.3.4 and Azure Architecture Expert v0.6.1) and Click on **App Intake Agent v1.3.4**
 4. Click on **Tools** on the top ribbon
-5. Click on **Send and Email (V2)** connector Name
+5. Click on **Send an Email (V2)** connector Name
 
 ![Outlook](1.4.1_02-Intake-Agent-Outlook.png)
 
@@ -67,7 +68,7 @@ Let's start with the AI-Migrate_Intake_Agent
 
 ![Outlook](1.4.1_03-Intake-Agent-Outlook.png)
 
-Let's continues with the Application Design Agent. Don't need to close this window
+Let's continue with the Application Design Agent. Don't need to close this window
 
 ### Step 1.2.2: Configure Design Agent Settings
 

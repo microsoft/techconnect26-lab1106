@@ -6,14 +6,14 @@ Once you have configured and tested the Design Agent, you can publish it to vari
 
 Copilot Studio supports publishing to multiple channels:
 
-| Channel | Use Case | Audience |
-|---------|----------|----------|
-| **Microsoft Teams** | Internal collaboration | Architects, Consultants |
-| **SharePoint** | Embedded in project sites | Project teams |
-| **Power Apps** | Custom applications | Field consultants |
-| **Web (Demo Website)** | External demos | Customer presentations |
-| **Azure Bot Service** | Custom integrations | Developers |
-| **Microsoft 365 Copilot** | Copilot integration | Enterprise users |
+| Channel                   | Use Case                  | Audience                |
+| ------------------------- | ------------------------- | ----------------------- |
+| **Microsoft Teams**       | Internal collaboration    | Architects, Consultants |
+| **SharePoint**            | Embedded in project sites | Project teams           |
+| **Power Apps**            | Custom applications       | Field consultants       |
+| **Web (Demo Website)**    | External demos            | Customer presentations  |
+| **Azure Bot Service**     | Custom integrations       | Developers              |
+| **Microsoft 365 Copilot** | Copilot integration       | Enterprise users        |
 
 ## Step 9.2: Publish the Agent
 
@@ -69,6 +69,7 @@ Microsoft Teams is the recommended channel for internal use by architects and co
 ### 9.3.3 Set Availability
 
 1. Under **Availability options**, select:
+
    - ☑️ **Show to my teammates and shared users** (for testing)
    - ☑️ **Show to everyone in my org** (for production)
 
@@ -103,10 +104,11 @@ Embed the Design Agent in SharePoint sites for easy access from project workspac
 2. Copy the **Embed code**:
 
 ```html
-<iframe 
+<iframe
   src="https://copilotstudio.microsoft.com/environments/[env]/bots/[botId]/webchat"
   frameborder="0"
-  style="width: 100%; height: 600px;">
+  style="width: 100%; height: 600px;"
+>
 </iframe>
 ```
 
@@ -152,6 +154,7 @@ Create a standalone demo website for customer presentations.
 
 1. Go to **Channels** > **Demo website**
 2. Click **Copy** to get the demo URL:
+
    ```
    https://copilotstudio.microsoft.com/environments/[env]/bots/[botId]/webchat
    ```
@@ -187,27 +190,27 @@ Once enabled, users can invoke the Design Agent from Microsoft 365 Copilot:
 ```
 User: @Design Agent generate an Azure architecture for the attached intake document
 
-Copilot: I'll help you generate an Azure architecture. Let me connect you 
+Copilot: I'll help you generate an Azure architecture. Let me connect you
          with the Design Agent...
 ```
 
 ## Step 9.8: Channel Management Best Practices
 
-| Practice | Recommendation |
-|----------|----------------|
-| Version control | Note published version in channel description |
-| Access control | Use Azure AD groups to control channel access |
-| Monitoring | Enable analytics for each channel |
-| Updates | Communicate changes before republishing |
-| Testing | Test in dev channel before production deployment |
+| Practice        | Recommendation                                   |
+| --------------- | ------------------------------------------------ |
+| Version control | Note published version in channel description    |
+| Access control  | Use Azure AD groups to control channel access    |
+| Monitoring      | Enable analytics for each channel                |
+| Updates         | Communicate changes before republishing          |
+| Testing         | Test in dev channel before production deployment |
 
 ## Step 9.9: Post-Publishing Checklist
 
 After publishing to channels, verify:
 
-- [ ] Agent responds correctly in each channel
-- [ ] File upload works (where supported)
-- [ ] Connections function properly
-- [ ] Email notifications are sent
-- [ ] SharePoint integration works
-- [ ] Analytics are being captured
+- Agent responds correctly in each channel
+- File upload works (where supported)
+- Connections function properly
+- Email notifications are sent
+- SharePoint integration works
+- Analytics are being captured

@@ -103,7 +103,7 @@ The Design Agent requires the following connections:
 
       2. Then, click on the display button (**˅**), and select the SharePoint site you had crated.
 
-      3. Next, delete content in _Folder Path_ input box, click on folder icon (near the right side of the input box) and select Generated Architectures folder.
+      3. Next, delete content in _Folder Path_ input box, click on folder icon (near the right side of the input box) and select _Shared Documents > Architecture-Documents_ folder.
 
    3. On the flow Designer page, click on the action **Get file properties** to expand it.
       1. Delete content in _Site Address_ and click on display button, select the SharePoint site you had crated.
