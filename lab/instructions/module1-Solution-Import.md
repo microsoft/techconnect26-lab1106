@@ -1,10 +1,6 @@
 # Module 1: Solution Import (10 minutes)
 
-In this module we'll import the solutions to present in this Lab
-   - **Intake Agent**
-   - **Design Agent**
-
-We'll access to Copilot Studio to Import the Solutions, then we'll review the Settings of the imported
+In this module we'll access to Copilot Studio to Import the Solutions, then we'll review the Settings of the imported
 
 ## Step 1: Access Copilot Studio and Import Solutions
 
