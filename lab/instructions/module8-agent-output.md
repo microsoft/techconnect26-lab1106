@@ -24,8 +24,7 @@ real-time shipment tracking, analytics, and deep...
 
 Documents the main data movement patterns:
 
-```markdown
-## 🔄 Data Flows
+🔄 Data Flows
 
 Real-time GPS telemetry is ingested through secure APIs and streaming 
 endpoints, normalized, and persisted in a document database optimized 
@@ -38,11 +37,11 @@ Enterprise integration uses private connectivity to ERP and corporate
 services. Secrets and keys are centrally managed, with encryption in 
 transit and at rest by default. Observability signals flow to a unified 
 logging and SIEM layer to support 24x7 operations and incident response.
-```
 
-## Step 8.3: Architecture Views
 
-The agent generates five standardized architecture views:
+## Step 8.3: Architecture Views - Key Elements
+
+The agent generates five standardized architecture views whit these Key Elements:
 
 ### View 1: Logical View — Conceptual
 
@@ -97,8 +96,7 @@ The agent generates five standardized architecture views:
 
 Explains design decisions aligned with best practices:
 
-```markdown
-## 📝 Rationales
+**📝 Rationales**
 
 **Security and Compliance:** The design adopts a zero trust posture with 
 identity-driven access, Private Link for data plane isolation, and 
@@ -120,14 +118,13 @@ overhead, letting the team focus on features. Centralized monitoring with
 Application Insights and Sentinel improves mean time to detect and remediate. 
 API Management policies standardize throttling, caching, and transformation, 
 reducing custom code and improving observability.
-```
 
 ## Step 8.5: Azure Resource Table
 
 The final section provides deployment-ready resource specifications:
 
-```markdown
-## 📊 Azure Resource Table — Visual
+**📊 Azure Resource Table — Visual**
+
 
 | Resource Name | Resource Type | SKU | Regions |
 |---------------|---------------|-----|---------|
@@ -139,6 +136,7 @@ The final section provides deployment-ready resource specifications:
 | Bastion-Host | Azure-Bastion | standard | eastus2 |
 | AppSpoke-VNet | Virtual-Network | n-a | eastus2-westeurope |
 | DataSpoke-VNet | Virtual-Network | n-a | eastus2-westeurope |
-```
+
+
 
 > 📋 **Note:** The resource table is provided in both Markdown and plain text formats for compatibility with deployment automation tools.
