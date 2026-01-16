@@ -307,4 +307,4 @@ By completing this lab, you will:
 10. Start a New Test Session in the chat window to test the new feature as shown in the Image
 
     ![Test](7.2_10-Test.png)
----
+
