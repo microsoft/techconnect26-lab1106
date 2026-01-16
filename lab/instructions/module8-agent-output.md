@@ -1,11 +1,11 @@
-# Module 8: Understanding the Output
+# Module 8: Understanding the Output (3 minutes)
 
 ## Step 8.1: Introduction Section
 
 The generated document begins with a formal introduction:
 
 ```markdown
-# 📦 SmartLogistics — Target Azure Architecture Details
+# SmartLogistics — Target Azure Architecture Details
 
 **Prepared for:** [Consultant Name]
 **Regions:** primary eastus2, failover westeurope
@@ -14,7 +14,7 @@ The generated document begins with a formal introduction:
 
 ---
 
-## 🧭 Introduction
+## Introduction
 
 SmartLogistics is a cloud-first logistics platform that provides 
 real-time shipment tracking, analytics, and deep...
@@ -24,7 +24,7 @@ real-time shipment tracking, analytics, and deep...
 
 Documents the main data movement patterns:
 
-🔄 Data Flows
+**Data Flows**
 
 Real-time GPS telemetry is ingested through secure APIs and streaming 
 endpoints, normalized, and persisted in a document database optimized 
@@ -96,7 +96,7 @@ The agent generates five standardized architecture views whit these Key Elements
 
 Explains design decisions aligned with best practices:
 
-**📝 Rationales**
+**Rationales**
 
 **Security and Compliance:** The design adopts a zero trust posture with 
 identity-driven access, Private Link for data plane isolation, and 
@@ -123,7 +123,7 @@ reducing custom code and improving observability.
 
 The final section provides deployment-ready resource specifications:
 
-**📊 Azure Resource Table — Visual**
+**Azure Resource Table — Visual**
 
 
 | Resource Name | Resource Type | SKU | Regions |
@@ -139,4 +139,4 @@ The final section provides deployment-ready resource specifications:
 
 
 
-> 📋 **Note:** The resource table is provided in both Markdown and plain text formats for compatibility with deployment automation tools.
+>  **Note:** The resource table is provided in both Markdown and plain text formats for compatibility with deployment automation tools.

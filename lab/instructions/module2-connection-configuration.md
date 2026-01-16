@@ -1,4 +1,4 @@
-# Module 2: Connection Configuration (11 minutes)
+# Module 2: Connection Configuration (10 minutes)
 
 After importing the solution, you must establish connections for the agent to function correctly.
 

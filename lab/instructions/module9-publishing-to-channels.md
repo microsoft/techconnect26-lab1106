@@ -1,4 +1,4 @@
-# Module 9: Publishing to Channels
+# Module 9: Publishing to Channels (3 minutes)
 
 Once you have configured and tested the Design Agent, you can publish it to various channels to make it accessible to architects and consultants across your organization.
 

@@ -26,5 +26,3 @@ The App Intake Agent and Application Design Agent use a knowledge file to ensure
 
     > 📄 **Knowledge File Purpose:** This text-based file guides the agent to produce resource configuration tables in a format compatible with the deployment agent.
 
-Congratulations, you've completed all steps of this module.
-You can move to Module 4-Design Agent usage

@@ -1,4 +1,4 @@
-# Appendix: Troubleshooting
+# Appendix: Troubleshooting (3 minutes)
 
 ## Common Issues and Solutions
 

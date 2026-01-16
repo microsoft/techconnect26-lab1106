@@ -1,4 +1,4 @@
-# Module 7:  Design Agent adding Cost Estimation Topic
+# Module 7:  Design Agent adding Cost Estimation Topic (10 minutes)
 
 ## Option 1: Add Cost Estimation Section
 

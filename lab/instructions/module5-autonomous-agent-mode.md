@@ -112,7 +112,7 @@ We are ready to upload a document into SharePoint to make our Agent generates a 
 
 5. Upload the document. Click on **Create or upload** on the right
 6. Click on **Files upload**
-7. Select the **Smart Logistics-Intake-2025-12-02** file frome the Desktop and click  **Open**
+7. Select the **Intake.md** file frome the Desktop and click  **Open**
 
     ![UploadFile](5.2_7-UploadFile.png)
 
@@ -145,3 +145,6 @@ We are ready to upload a document into SharePoint to make our Agent generates a 
 14. Go back to SharePoint and open the **Architecture-Documents** folder. Here you'll find the Architecture Design Document file **Smart Logistics-Target-Azure** generated and allocated in this path by the Agent
 
     ![ArchitectureDocument](5.2_14-ArchitectureDocument.png)
+
+    In case the Agent is taking long to respond there is a copy of the output on your desktop named **Design.md**
+

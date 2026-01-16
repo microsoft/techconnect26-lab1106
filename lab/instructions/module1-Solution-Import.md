@@ -99,4 +99,3 @@ Let's continue with the Application Design Agent. Don't need to close this windo
 
    ![WebSearch](1.2.2_3-WebSearch.png)
 
-Congratulations! All Solutions are imported. You can keep open the Edge 
