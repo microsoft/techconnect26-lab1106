@@ -49,7 +49,9 @@ The Design Agent produces:
 
 You have successfully configured the environment, you are now ready for the Lab exercises.
 
-- [ ] You can now move to Module 1 - Solution Import
+- [ ] Please tick to mark complete
+
+You can now move to Module 1 - Solution Import
 
 ===
 
@@ -57,7 +59,9 @@ You have successfully configured the environment, you are now ready for the Lab 
 
 Congratulations all agents are imported to Copilot Studio.
 
-- [ ] You can now move to Module 2 - Connection Configuration
+- [ ] Please tick to mark complete
+
+You can now move to Module 2 - Connection Configuration
 
 ===
 
@@ -65,7 +69,9 @@ Congratulations all agents are imported to Copilot Studio.
 
 Congratulations! All connections are configured and flows are published.
 
-- [ ] You can now move to Module 3 - Knowledge Base Setup
+- [ ] Please tick to mark complete
+
+You can now move to Module 3 - Knowledge Base Setup
 
 ===
 
@@ -73,7 +79,9 @@ Congratulations! All connections are configured and flows are published.
 
 Great! The knowledge bases are configured for both agents.
 
-- [ ] You can now move to Module 4 - Testing the Agents
+- [ ] Please tick to mark complete
+
+You can now move to Module 4 - Testing the Agents
 
 ===
 
@@ -81,7 +89,9 @@ Great! The knowledge bases are configured for both agents.
 
 Excellent! You've successfully tested both the Intake Agent and Design Agent.
 
-- [ ] You can now move to Module 5 - Autonomous Agent Mode
+- [ ] Please tick to mark complete
+
+You can now move to Module 5 - Autonomous Agent Mode
 
 ===
 
@@ -89,13 +99,17 @@ Excellent! You've successfully tested both the Intake Agent and Design Agent.
 
 Perfect! You've configured autonomous mode for automated document processing.
 
-- [ ] You can now move to Module 6 - Topic Walkthrough
+- [ ] Please tick to mark complete
+
+You can now move to Module 6 - Topic Walkthrough
 
 ===
 
 !INSTRUCTIONS [Module 6 - Topic Walkthrough](https://raw.githubusercontent.com/microsoft/techconnect26-lab1106/refs/heads/main/lab/instructions/module6-topic-walkthrough.md)
 
 Well done! You now understand the complete topic flow and generation process.
+
+- [ ] Please tick to mark complete
 
 You can now move to Module 7 - Add cost estimation topic
 
@@ -105,7 +119,9 @@ You can now move to Module 7 - Add cost estimation topic
 
 Congratulations! You have added a new topic to the agent
 
-- [ ] You can now move to Module 8 - Understanding the output
+- [ ] Please tick to mark complete
+
+You can now move to Module 8 - Understanding the output
 
 ===
 
@@ -113,7 +129,7 @@ Congratulations! You have added a new topic to the agent
 
 Great! You now understand the structure and content of the generated architecture documents.
 
-- [ ] You can now move to Module 9 - Publishing to Channels
+You can now move to Module 9 - Publishing to Channels
 
 ===
 
@@ -121,7 +137,7 @@ Great! You now understand the structure and content of the generated architectur
 
 Congratulations! You've successfully published the agents to various channels.
 
-- [ ] You can now move to the Appendix - Troubleshooting
+You can now move to the Appendix - Troubleshooting
 
 ===
 
