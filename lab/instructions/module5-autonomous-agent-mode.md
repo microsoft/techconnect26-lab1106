@@ -106,7 +106,7 @@ We are ready to upload a document into SharePoint to make our Agent generates a 
     This was created in step Module 0 Prerequisites
 
 3. Click on Document on the left menu
-4. Click on **Intake-Documents** folder
+4. Open **Intake-Documents** folder
 
     ![IntakeDocumentsFolder](5.2_4-IntakeDocumentsFolder.png)
 
