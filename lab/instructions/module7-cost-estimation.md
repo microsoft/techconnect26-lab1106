@@ -1,14 +1,6 @@
 # Module 7:  Design Agent adding Cost Estimation Topic
 
-## 📘 Lab Option 1: Add Cost Estimation Section
-
-**Difficulty:** Level 300 | **Duration:** 10 minutes
-
-🎯 Learning Objectives
-
-- Add a new generative AI action to an existing Topic to include Azure Resources Cost Estimation
-- Chain outputs between Topic actions
-- Modify document assembly logic
+## Option 1: Add Cost Estimation Section
 
 ### Step 1: Enable Web Search and Topic changes Copilot Studio
 
@@ -153,19 +145,7 @@ Now let's update two nodes (*Set variable value* and *Message*) in this flow wit
 
 ---
 
-## 📘 Lab Option 2: Add WAF Compliance Checklist (Optional)
-
-**Difficulty:** Level 350 | **Duration:** 10 minutes
-
-### 🎯 Learning Objectives
-
-By completing this lab, you will:
-- Implement Azure Well-Architected Framework validation
-- Create automated compliance checklists with status indicators
-- Integrate governance checks into document generation
-- Provide actionable recommendations based on architecture analysis
-
----
+## Lab Option 2: Add WAF Compliance Checklist (Optional)
 
 ### Step 1: Open the Topic in Copilot Studio
 
