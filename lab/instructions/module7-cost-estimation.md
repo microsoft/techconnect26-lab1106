@@ -188,7 +188,7 @@ By completing this lab, you will:
 
 6. Scroll down to line 568 where the **GenerateAzureResourcesTable** block ends. Add 2 lines after line 567 and insert the code below into line 568
 
-  ```yaml
+ ```yaml
       - kind: SearchAndSummarizeContent
         id: WAFCheck01
         displayName: GenerateWAFChecklist
@@ -288,9 +288,9 @@ By completing this lab, you will:
         knowledgeSources:
           kind: SearchAllKnowledgeSources
         responseCaptureType: FullResponse
-  ```
+```
 
-    ![Line568](7.2_6-Line568.png)
+![Line568](7.2_6-Line568.png)
 
 7. Find the `sendActivity_displayOnly` section with 'Ctrl+F' to add the WAF Checklist action. (It would be in line 466)
 
