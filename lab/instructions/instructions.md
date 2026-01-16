@@ -17,7 +17,7 @@ To begin, log into the virtual machine using the following credentials: +++@lab.
 
 ### Introduction
 
-The **Intake Agent** and **Design Agent** are a Microsoft Copilot Studio–built architecture generator that leverages deep-reasoning capabilities (GPT-5 Reasoning model) to transform application intake data into comprehensive Azure architectural designs. This solution enables rapid generation of baseline Azure architectures, significantly accelerating the design phase of cloud migration and modernization engagements.
+The **Intake Agent** and **Design Agent** are a Microsoft Copilot Studio-built architecture generator that leverages deep-reasoning capabilities (GPT-5 Reasoning model) to transform application intake data into comprehensive Azure architectural designs. This solution enables rapid generation of baseline Azure architectures, significantly accelerating the design phase of cloud migration and modernization engagements.
 
 ### What You Will Learn
 
@@ -49,7 +49,7 @@ The Design Agent produces:
 
 You have successfully configured the environment, you are now ready for the Lab exercises.
 
-You can now move to Module 1 - Solution Import
+- [ ] You can now move to Module 1 - Solution Import
 
 ===
 
@@ -57,7 +57,7 @@ You can now move to Module 1 - Solution Import
 
 Congratulations all agents are imported to Copilot Studio.
 
-You can now move to Module 2 - Connection Configuration
+- [ ] You can now move to Module 2 - Connection Configuration
 
 ===
 
@@ -65,7 +65,7 @@ You can now move to Module 2 - Connection Configuration
 
 Congratulations! All connections are configured and flows are published.
 
-You can now move to Module 3 - Knowledge Base Setup
+- [ ] You can now move to Module 3 - Knowledge Base Setup
 
 ===
 
@@ -73,7 +73,7 @@ You can now move to Module 3 - Knowledge Base Setup
 
 Great! The knowledge bases are configured for both agents.
 
-You can now move to Module 4 - Testing the Agents
+- [ ] You can now move to Module 4 - Testing the Agents
 
 ===
 
@@ -81,7 +81,7 @@ You can now move to Module 4 - Testing the Agents
 
 Excellent! You've successfully tested both the Intake Agent and Design Agent.
 
-You can now move to Module 5 - Autonomous Agent Mode
+- [ ] You can now move to Module 5 - Autonomous Agent Mode
 
 ===
 
@@ -89,7 +89,7 @@ You can now move to Module 5 - Autonomous Agent Mode
 
 Perfect! You've configured autonomous mode for automated document processing.
 
-You can now move to Module 6 - Topic Walkthrough
+- [ ] You can now move to Module 6 - Topic Walkthrough
 
 ===
 
@@ -103,9 +103,9 @@ You can now move to Module 7 - Add cost estimation topic
 
 !INSTRUCTIONS [Module 7 - Add cost estimation topic](https://raw.githubusercontent.com/microsoft/techconnect26-lab1106/refs/heads/main/lab/instructions/module7-cost-estimation.md)
 
-Wow! You have added a new topic to the agent
+Congratulations! You have added a new topic to the agent
 
-You can now move to Module 8 - Understanding the output
+- [ ] You can now move to Module 8 - Understanding the output
 
 ===
 
@@ -113,7 +113,7 @@ You can now move to Module 8 - Understanding the output
 
 Great! You now understand the structure and content of the generated architecture documents.
 
-You can now move to Module 9 - Publishing to Channels
+- [ ] You can now move to Module 9 - Publishing to Channels
 
 ===
 
@@ -121,7 +121,7 @@ You can now move to Module 9 - Publishing to Channels
 
 Congratulations! You've successfully published the agents to various channels.
 
-You can now move to the Appendix - Troubleshooting
+- [ ] You can now move to the Appendix - Troubleshooting
 
 ===
 
