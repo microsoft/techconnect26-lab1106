@@ -1,4 +1,4 @@
-# Module 4: Testing the Agents (25 minutes)
+# Module 4: Testing the Agents (10 minutes)
 
 ## 4.1 Intake Agent
 
@@ -49,7 +49,7 @@ This module focuses on the **interactive** conversation-based approach, and auto
 
    `SmartLogistics`
 
-6. Attach the **Intake.md** file from the Desktop.
+6. Attach the **Smart Logistics-Intake-2025-12-02.md** file from the Desktop.
 
    You should see the agent start responding:
 
