@@ -28,7 +28,7 @@ Before publishing to any channel, you must first publish the agent:
 4. Click **Publish**
 5. Wait for confirmation: "Your agent is published"
 
->  **Important:** You must republish the agent whenever you make changes to topics, knowledge, or settings.
+**Important:** You must republish the agent whenever you make changes to topics, knowledge, or settings.
 
 ## Step 9.3: Publish to Microsoft 365 Copilot
 
@@ -71,8 +71,7 @@ Create a standalone demo website for customer presentations.
 
 Share the demo URL with customers for presentations:
 
-> 🔗 **Demo URL:** `https://copilotstudio.microsoft.com/environments/.../webchat`
-
+**Demo URL:** `https://copilotstudio.microsoft.com/environments/.../webchat`
 
 ## Step 9.5: Channel Management Best Practices
 
