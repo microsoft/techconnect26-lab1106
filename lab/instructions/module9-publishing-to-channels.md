@@ -47,7 +47,7 @@ For organizations with Microsoft 365 Copilot, the Design Agent can be integrated
 
    ![PublishAgentinM365Copilot](9.3.1_5-PublishAgentinM365Copilot.png)
 
-*Note:* The agent will request to connect the connections
+*Note:The agent will request to connect the connections*
 
 ## Step 9.4: Publish to Demo Website
 
