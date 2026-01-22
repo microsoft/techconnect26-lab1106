@@ -43,7 +43,7 @@ For organizations with Microsoft 365 Copilot, the Design Agent can be integrated
 
    ![PublishAgent](9.3.1_4-PublishAgentinMicrosoft365.png)
 
-5. Click on **Add** to add the agent into M365 Copilot
+5. Click on **Add** to publish the agent to M365 Copilot
 
    ![PublishAgentinM365Copilot](9.3.1_5-PublishAgentinM365Copilot.png)
 
