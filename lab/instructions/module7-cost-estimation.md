@@ -23,7 +23,7 @@
     ![GenerativeAnswers](7.1_6-GenerativeAnswers.png)
 
 7. Click on the name and replace by **GenerateCostEstimation**
-8. Click on the three dots in the **Input** section
+8. Click on the **elipses (...)** in the **Input** section
 9. Add the following expression by clicking on the Formula tab 
 
         Topic.varApp & " " & Topic.varAzureResourceTable.Text.MarkdownContent
@@ -32,7 +32,7 @@
 
     ![Formula](7.1_9-Formula.png)
 
-10. Stay in the Node, click on **Properties**
+10. Stay in the Node, click on **elipses (...)** then **Properties**
 11. In the Properties Pane scroll down to **Content moderation level**, under **Customize**  insert the generative AI instruction. *(Copy/Paste the text below)* 
 
     ```yaml
@@ -107,6 +107,7 @@
 
     ![Variable](7.1_15-Variable.png)
 
+
 16. Close the Properties pane.
 
 Now let's update two nodes (*Set variable value* and *Message*) in this flow with this new variable
@@ -114,14 +115,14 @@ Now let's update two nodes (*Set variable value* and *Message*) in this flow wit
 - Set variable value
 
   1. In the Flow go to **Set variable value** Node (two nodes after the GenerateCostEstimation node recently created)
-  2. Click on the three dots in **To value** field into the **Set variable value** node
+  2. Click on the **elipses (...)** in **To value** field into the **Set variable value** node
   
       ![SetValue](7.1_16.1-SetValue.png)
   
   3. Expand the form and enter at the end of the formula
       
-      & Char(10) & Char(10)
-                        & Topic.varCostEstimate.Text.MarkdownContent
+        & Char(10) & Char(10)
+        & Topic.varCostEstimate.Text.MarkdownContent
       
   4. Click **Insert**
 
@@ -157,128 +158,101 @@ Now let's update two nodes (*Set variable value* and *Message*) in this flow wit
 
     ![Topics](7.2_2-Topics.png)
 
-3. Click on three dots first.
+3. Click on the **elipses (...)** first.
 4. Click on **"</> Open code editor"** to switch to YAML view. 
 
     ![CodeEditor](7.2_4-CodeEditor.png)
 
-5. Find the `GenerateAzureResourcesTable` section with 'Ctrl+F' to add the WAF Checklist action. (It would be in line 466)
+5. Find the `GenerateAzureResourcesTable` section with 'Ctrl+F' to add the WAF Checklist action.
 
     ![FindNode](7.2_5-FindNode.png)
 
-6. Scroll down to line 568 where the **GenerateAzureResourcesTable** block ends. Add 2 lines after line 567 and insert the code below into line 568
+6. Scroll down where the **GenerateAzureResourcesTable** block ends. Add 2 lines after and insert the code below
 
  ```yaml
-      - kind: SearchAndSummarizeContent
-        id: WAFCheck01
-        displayName: GenerateWAFChecklist
-        variable: Topic.varWAFChecklist
-        userInput: =Topic.varApp & " " & Topic.varIntakeText & " " & Topic.varAzureResourceTable.Text.MarkdownContent
-        additionalInstructions: |-
-          You are an Azure Well-Architected Framework (WAF) expert generating a compliance checklist.
+   - kind: SearchAndSummarizeContent
+      id: CostEst01
+      displayName: GenerateCostEstimation
+      variable: Topic.varCostEstimate
+      userInput: =Topic.varApp & " " & Topic.varAzureResourceTable.Text.MarkdownContent
+      additionalInstructions: |-
+        You are an Azure cost estimation expert generating a cost analysis section.
 
-          APPLICATION NAME: {Topic.varApp}
+        APPLICATION NAME: {Topic.varApp}
 
-          INTAKE DOCUMENT:
-          {Topic.varIntakeText}
+        AZURE RESOURCES IDENTIFIED:
+        {Topic.varAzureResourceTable.Text.MarkdownContent}
 
-          AZURE RESOURCES:
-          {Topic.varAzureResourceTable.Text.MarkdownContent}
+        Generate ONLY the Cost Estimation section.
 
-          Generate ONLY the WAF Compliance Checklist section.
+        COST ESTIMATION SECTION:
+        Use exact heading: ## 💰 Estimated Monthly Costs
 
-          Use exact heading: ## ✅ Well-Architected Framework Compliance Checklist
+        INSTRUCTIONS:
+        1. Analyze each Azure resource from the resource table
+        2. Provide estimated monthly cost ranges based on the SKU tiers identified
+        3. Group costs by category
 
-          ANALYZE the intake document and resource table against each WAF pillar.
-          Use these status indicators:
-          - ✅ Fully addressed in the design
-          - ⚠️ Partially addressed or needs clarification
-          - ❌ Not addressed or missing
+        CREATE A COST TABLE:
+        | Category | Resource | SKU | Est. Monthly Cost (USD) |
+        |----------|----------|-----|-------------------------|
 
-          CREATE CHECKLIST FOR EACH PILLAR:
+        Include these categories:
+        - **Compute:** App Services, Functions, Container Apps
+        - **Data:** SQL Database, Cosmos DB, Storage Accounts
+        - **Networking:** Front Door, Firewall, Private Link, Bandwidth
+        - **Security:** Key Vault, WAF, DDoS Protection
+        - **Monitoring:** Application Insights, Log Analytics, Sentinel
 
-          ### 🛡️ Reliability
-          Evaluate and list 5 items with status indicators:
-          - Multi-region deployment configured
-          - Failover strategy defined (active-passive or active-active)
-          - RTO and RPO requirements documented
-          - Health probes and monitoring configured
-          - Backup and disaster recovery plan included
+        AFTER THE TABLE ADD:
 
-          ### 🔐 Security
-          Evaluate and list 5 items with status indicators:
-          - Zero Trust architecture principles applied
-          - Network segmentation with NSGs and Firewall
-          - Data encryption at rest and in transit
-          - Identity management with Azure AD or B2C
-          - Secrets management using Key Vault
-          - Threat detection with Sentinel or Defender
+        ### 📊 Cost Summary
+        - **Estimated Monthly Total:** $X,XXX - $X,XXX
+        - **Estimated Annual Total:** $XX,XXX - $XX,XXX
 
-          ### ⚡ Performance Efficiency
-          Evaluate and list 5 items with status indicators:
-          - Auto-scaling configuration defined
-          - Caching strategy for frequently accessed data
-          - CDN or Front Door for global user access
-          - Database tier appropriate for expected load
-          - Async processing for heavy or batch workloads
+        ### 💡 Cost Optimization Recommendations
+        Add 3-4 bullet points with cost-saving recommendations such as:
+        - Reserved Instances for predictable workloads
+        - Auto-scaling policies to reduce off-peak costs
+        - Lifecycle policies for storage
+        - Right-sizing based on actual usage
 
-          ### 💵 Cost Optimization
-          Evaluate and list 5 items with status indicators:
-          - Right-sized SKUs based on requirements
-          - Reserved capacity opportunities identified
-          - Auto-shutdown policies for non-production
-          - Storage tiering and lifecycle policies
-          - Cost monitoring and alerting configured
+        PRICING GUIDELINES (use these estimates):
+        - App Service P2v2: $150-200/month per instance
+        - App Service P3v2: $300-400/month per instance
+        - SQL Database Business Critical: $400-800/month
+        - SQL Database Standard: $150-300/month
+        - Event Hubs Standard: $20-50/month per TU
+        - Event Hubs Premium: $100-200/month per PU
+        - Key Vault Standard: $0.03 per 10,000 operations
+        - Application Insights: $2.30 per GB ingested
+        - Log Analytics: $2.76 per GB ingested
+        - Azure Firewall Standard: $900-1,100/month
+        - Azure Firewall Premium: $1,500-1,800/month
+        - Front Door Standard: $35/month + $0.01/request
+        - Front Door Premium: $330/month + usage
+        - Azure Sentinel: $2.46 per GB analyzed
+        - Storage Account (Hot): $0.018 per GB/month
+        - Data Lake Storage: $0.02 per GB/month
 
-          ### 🔧 Operational Excellence
-          Evaluate and list 5 items with status indicators:
-          - Centralized logging with Log Analytics
-          - Application performance monitoring with App Insights
-          - Alerting rules and dashboards defined
-          - Infrastructure as Code for deployments
-          - Runbooks for common operational tasks
-
-          AFTER THE CHECKLISTS ADD:
-
-          ### 📊 Compliance Summary Table
-
-          | Pillar | Status | Items Addressed | Score |
-          |--------|--------|-----------------|-------|
-          | Reliability | ✅/⚠️/❌ | X of 5 | X/5 |
-          | Security | ✅/⚠️/❌ | X of 6 | X/6 |
-          | Performance | ✅/⚠️/❌ | X of 5 | X/5 |
-          | Cost Optimization | ✅/⚠️/❌ | X of 5 | X/5 |
-          | Operational Excellence | ✅/⚠️/❌ | X of 5 | X/5 |
-          | **Overall WAF Score** | | | **X/26** |
-
-          STATUS DETERMINATION:
-          - ✅ if score is 80% or higher
-          - ⚠️ if score is 50-79%
-          - ❌ if score is below 50%
-
-          ### 🎯 Priority Recommendations
-
-          List the top 3-5 items that need immediate attention before architecture approval.
-          Format as numbered list with brief explanation for each.
-
-          Add citation [1] at end.
-        fileSearchDataSource:
-          searchFilesMode:
-            kind: SearchAllFiles
-        knowledgeSources:
-          kind: SearchAllKnowledgeSources
-        responseCaptureType: FullResponse
-```
+        Add citation [1] at end.
+      fileSearchDataSource:
+        searchFilesMode:
+          kind: SearchAllFiles
+      knowledgeSources:
+        kind: SearchAllKnowledgeSources
+      responseCaptureType: FullResponse
+``` 
 
 ![Line568](7.2_6-Line568.png)
 
-7. Find the `sendActivity_displayOnly` section with 'Ctrl+F' to add the WAF Checklist action. (It would be in line 466)
+7. Find the `sendActivity_displayOnly` section with 'Ctrl+F' to add the WAF Checklist action.
 
     ![FindNode](7.2_7-FindNode.png)
 
-8. Scroll down to line 666 where the **sendActivity_displayOnly** block ends. Add 1 lines after line 666 and insert the code below into line 667
+8. Scroll down where the **sendActivity_displayOnly** block ends . Add 2 lines after insert the code below
 
-                  {Topic.varWAFChecklist.Text.MarkdownContent}
+                    {Topic.varWAFChecklist.Text.MarkdownContent}
 
 9. Save
 

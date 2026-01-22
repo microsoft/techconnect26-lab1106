@@ -40,10 +40,10 @@ Let's start with the **IntakeAgent_1_0_0_7** package
 
      ![Import](1.1_18-Import.png)
 
-Let's continue importing the **DesignAgent_1_0_0_11** package
+Let's continue importing the **DesignAgent_1_0_0_12** package
 *Execute the prior steps 12 and 13 again* and come back to *step 19*
 
-19. Select the zip file **DesignAgent_1_0_0_11.zip** solution package
+19. Select the zip file **DesignAgent_1_0_0_12.zip** solution package
 20. Click **Open**
 
      ![OpenSolutionPackage](1.1_19-OpenSolutionPackage.png)

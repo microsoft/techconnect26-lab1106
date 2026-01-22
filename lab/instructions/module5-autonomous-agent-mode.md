@@ -125,7 +125,7 @@ We are ready to upload a document into SharePoint to make our Agent generates a 
     ![InvokeDesignAgentFlow](5.2_8-InvokeDesignAgentFlow.png)
 
 9. Navigate to the Overview tab on the top, go to **28-day run history**
-10. The status will be *Succeeded**. If it is **Running** then click on **Refresh**
+10. Click on **Refresh** until the status changes to *Succeeded*
 
     ![FlowStatus](5.2_10-FlowStatus.png)
 
@@ -136,7 +136,7 @@ We are ready to upload a document into SharePoint to make our Agent generates a 
     ![SaveDesignDocumentFlow](5.2_11-SaveDesignDocumentFlow.png)
 
 12. Navigate to the Overview tab on the top, go to **28-day run history**
-13. The status will be *Succeeded**. If it is **Running** then click on **Refresh**
+13. The status will be *Succeeded**. Click on **Refresh** until the status changes to *Succeeded*
 
     ![FlowStatus](5.2_13-FlowStatus.png)
 

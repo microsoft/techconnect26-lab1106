@@ -30,8 +30,6 @@ Before publishing to any channel, you must first publish the agent:
 
 >  **Important:** You must republish the agent whenever you make changes to topics, knowledge, or settings.
 
-   *Let's publish the Design agent into Microsoft 365 Copilot and/or Demo Website* 
-
 ## Step 9.3: Publish to Microsoft 365 Copilot
 
 For organizations with Microsoft 365 Copilot, the Design Agent can be integrated as a plugin.
@@ -39,25 +37,18 @@ For organizations with Microsoft 365 Copilot, the Design Agent can be integrated
 ### 9.3.1 Enable Copilot Integration
 
 1. Go to **Channels** > **Microsoft 365 Copilot**
-2. Click **Enable**
-3. Configure plugin settings:
-   - Plugin name: "Design Agent"
-   - Description: "Generate Azure architectures"
-   - Trigger phrases: "design architecture", "generate Azure design"
+2. Click **Teams and Microsfot 365 Copilot**
+3. Keep checked *Make agent available in Microosft 365 Copilot*
+4. Click on **See agent in Microsoft 365**
 
-### 9.3.2 User Access
+   ![PublishAgent](<9.3.1_4-PublishAgent in Microsoft 365.png>)
 
-Once enabled, users can invoke the Design Agent from Microsoft 365 Copilot:
+5. Click on **Add** to add the agent into M365 Copilot
 
-```
-User: @Design Agent generate an Azure architecture for the attached intake document
+   ![PublishAgentinM365Copilot](9.3.1_5-PublishAgentinM365Copilot.png)
 
-Copilot: I'll help you generate an Azure architecture. Let me connect you
-         with the Design Agent...
 
-Note: Use the sample document named "Intake.pdf" from the desktop
-
-```
+   *Note:* The agent will request to connect the connections
 
 ## Step 9.4: Publish to Demo Website
 

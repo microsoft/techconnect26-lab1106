@@ -49,7 +49,7 @@ This module focuses on the **interactive** conversation-based approach, and auto
 
    `SmartLogistics`
 
-6. Attach the **Smart Logistics-Intake-2025-12-02.md** file from the Desktop.
+6. Attach the **Intake.md** file from the Desktop.
 
    You should see the agent start responding:
 
@@ -59,7 +59,7 @@ This module focuses on the **interactive** conversation-based approach, and auto
 
 8. Don't move away from the window until the response is completed.
 
-9. The The agent will generate a comprehensive architecture document with the following structure:
+9. The agent will generate a comprehensive architecture document with the following structure:
 
    ```
    📦 [AppName] — Target Azure Architecture Details
