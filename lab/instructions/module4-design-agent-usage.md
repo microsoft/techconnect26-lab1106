@@ -55,9 +55,12 @@ This module focuses on the **interactive** conversation-based approach, and auto
 
    ![TestDesignAgent](4.2_02-TestingDesignAgent.png)
 
-7. Wait for the agent to process (Average duration: ~71 seconds)
+7. Wait for the agent to process (Average duration: ~71 seconds). 
 
-8. Don't move away from the window until the response is completed.
+8. Don't move away from the window until the response is completed. If takes more time than the average the response looks like as shown in the Image
+   
+   ![DesignAgentResponse](4.2_03-DesignAgentResponse.png)
+
 
 9. The agent will generate a comprehensive architecture document with the following structure:
 
@@ -78,6 +81,3 @@ This module focuses on the **interactive** conversation-based approach, and auto
    └── 📊 Azure Resource Table
    ```
 
-   The response looks like as shown in the Image
-   
-   ![DesignAgentResponse](4.2_03-DesignAgentResponse.png)
