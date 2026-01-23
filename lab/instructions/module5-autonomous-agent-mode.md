@@ -112,7 +112,7 @@ We are ready to upload a document into SharePoint to make our Agent generates a 
 
 5. Upload the document. Click on **Create or upload** on the right
 6. Click on **Files upload**
-7. Select the **Intake.md** file frome the Desktop and click  **Open**
+7. Select the **Intake.md** or **Intake.pdf** file frome the Desktop and click  **Open**
 
     ![UploadFile](5.2_7-UploadFile.png)
 

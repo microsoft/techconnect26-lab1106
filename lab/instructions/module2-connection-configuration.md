@@ -107,7 +107,7 @@ The Design Agent requires the following connections:
 
    3. On the flow Designer page, click on the action **Get file properties** to expand it.
       1. Delete content in _Site Address_ and click on display button, select the SharePoint site you had crated.
-      2. Delete content in _Library Name_, click on display button and select _Document_.
+      2. Delete content in _Library Name_, click on display button and select _Documents_.
    4. Once is done click on **Publish**
 
 4. Review all flows status = **Published**

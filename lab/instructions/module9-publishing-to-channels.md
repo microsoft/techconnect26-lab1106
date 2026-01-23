@@ -49,7 +49,7 @@ For organizations with Microsoft 365 Copilot, the Design Agent can be integrated
 
 Note:The agent will request to connect the connections
 
-## Step 9.4: Publish to Demo Website
+## Step 9.4: Publish to Demo Website (Optional)
 
 Create a standalone demo website for customer presentations.
 

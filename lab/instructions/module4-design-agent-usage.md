@@ -77,3 +77,7 @@ This module focuses on the **interactive** conversation-based approach, and auto
    ├── ⚠️ Limitations
    └── 📊 Azure Resource Table
    ```
+
+   The response looks like as shown in the Image
+   
+   ![DesignAgentResponse](4.2_03-DesignAgentResponse.png)

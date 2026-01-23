@@ -26,22 +26,29 @@
 8. Click on the **elipses (...)** in the **Input** section
 9. Add the following expression by clicking on the Formula tab 
 
-        Topic.varApp & " " & Topic.varAzureResourceTable.Text.MarkdownContent
+        Topic.varApp & " Azure cost estimation pricing monthly compute data networking"
 
    and click on **Insert**
 
     ![Formula](7.1_9-Formula.png)
 
-10. Stay in the Node, click on **elipses (...)** then **Properties**
-11. In the Properties Pane scroll down to **Content moderation level**, under **Customize**  insert the generative AI instruction. *(Copy/Paste the text below)* 
+10. Stay in the Node, click on **elipses (...)** then **Properties**. 
+11. In the Properties Pane, click on *Search only selected sources* and mark all of them clicking on *Name* checkbox. Then scroll down to **Content moderation level**, under **Customize**  insert the generative AI instruction. *(Copy/Paste the text below)* 
 
     ```yaml
             You are an Azure cost estimation expert generating a cost analysis section.
 
+            IMPORTANT: Use ONLY the information provided in this prompt. Do NOT rely on external knowledge sources for the application-specific content.
+
             APPLICATION NAME: {Topic.varApp}
 
-            AZURE RESOURCES IDENTIFIED:
+            ================== APPLICATION REQUIREMENTS ==================
+            {Topic.varIntakeText}
+            ================== END REQUIREMENTS ==================
+
+            ================== AZURE RESOURCES ==================
             {Topic.varAzureResourceTable.Text.MarkdownContent}
+            ================== END AZURE RESOURCES ==================
 
             Generate ONLY the Cost Estimation section.
 
@@ -49,15 +56,15 @@
             Use exact heading: ## 💰 Estimated Monthly Costs
 
             INSTRUCTIONS:
-            1. Analyze each Azure resource from the resource table
-            2. Provide estimated monthly cost ranges based on the SKU tiers identified
+            1. Analyze the intake document to identify Azure resources needed
+            2. Provide estimated monthly cost ranges based on business criticality and SKU tiers
             3. Group costs by category
 
             CREATE A COST TABLE:
             | Category | Resource | SKU | Est. Monthly Cost (USD) |
             |----------|----------|-----|-------------------------|
 
-            Include these categories:
+            Include these categories based on intake requirements:
             - **Compute:** App Services, Functions, Container Apps
             - **Data:** SQL Database, Cosmos DB, Storage Accounts
             - **Networking:** Front Door, Firewall, Private Link, Bandwidth
@@ -65,7 +72,6 @@
             - **Monitoring:** Application Insights, Log Analytics, Sentinel
 
             AFTER THE TABLE ADD:
-
             ### 📊 Cost Summary
             - **Estimated Monthly Total:** $X,XXX - $X,XXX
             - **Estimated Annual Total:** $XX,XXX - $XX,XXX
@@ -79,21 +85,13 @@
 
             PRICING GUIDELINES (use these estimates):
             - App Service P2v2: $150-200/month per instance
-            - App Service P3v2: $300-400/month per instance
             - SQL Database Business Critical: $400-800/month
-            - SQL Database Standard: $150-300/month
-            - Event Hubs Standard: $20-50/month per TU
-            - Event Hubs Premium: $100-200/month per PU
-            - Key Vault Standard: $0.03 per 10,000 operations
+            - Event Hubs Standard: $20-50/month per throughput unit
+            - Key Vault: $0.03 per 10,000 operations
             - Application Insights: $2.30 per GB ingested
             - Log Analytics: $2.76 per GB ingested
-            - Azure Firewall Standard: $900-1,100/month
-            - Azure Firewall Premium: $1,500-1,800/month
-            - Front Door Standard: $35/month + $0.01/request
-            - Front Door Premium: $330/month + usage
-            - Azure Sentinel: $2.46 per GB analyzed
-            - Storage Account (Hot): $0.018 per GB/month
-            - Data Lake Storage: $0.02 per GB/month
+            - Azure Firewall: $900-1,100/month
+            - Front Door: $35/month base + $0.01 per request
 
             Add citation [1] at end.
       ```
@@ -110,7 +108,7 @@
 
 16. Close the Properties pane.
 
-Now let's update two nodes (*Set variable value* and *Message*) in this flow with this new variable
+Now let's update two nodes (_Set variable value_ and _Message_) in this flow with this new variable
 
 - Set variable value
 
@@ -121,8 +119,10 @@ Now let's update two nodes (*Set variable value* and *Message*) in this flow wit
   
   3. Expand the form and enter at the end of the formula
       
-        & Char(10) & Char(10)
+        & Char(10) & Char(10)                  
         & Topic.varCostEstimate.Text.MarkdownContent
+
+    as shown in the image
       
   4. Click **Insert**
 
@@ -132,133 +132,18 @@ Now let's update two nodes (*Set variable value* and *Message*) in this flow wit
 
   1. In the Flow go to **Message** Node (on the right of the **Set variable value** Node of the prior step) and click on **Target Azure Architecture Document for**
 
-      ![Essage](7.2-16.1-Message.png)
+      ![Message](7.2-16.1-Message.png)
 
   2. Click on variable Icon
-  3. in the text field type the name of the created variable **varcostestimate**
-  4. scroll down and select **varCostEstimate.Text.MarkdownContent**
+  3. In the text field type the name of the created variable **varCostEstimate**
+  4. Scroll down and select **varCostEstimate.Text.MarkdownContent**
 
       ![Variable](7.1-16.4-Variable.png)
+
+  5. Click on _Save_ on the top right
 
 17. Start a New Test Session in the chat window to test the new feature as shown in the Image. 
 
       ![Response](7.1-17-Response.png)
 
 ---
-
-## Lab Option 2: Add WAF Compliance Checklist (Optional)
-
-### Step 1: Open the Topic in Copilot Studio
-
-1. Hover over the Agent icon on the left ribbon to show the list of the Agents and click on **Application Design Agent**
-
-    ![ApplicationDesignAgent](7.1_1-ApplicationDesignAgent.png)
-
-2. Go to Topics on the top and click on **Generate and save Azure architecture doc** from the list of Topics.
-
-    ![Topics](7.2_2-Topics.png)
-
-3. Click on the **elipses (...)** first.
-4. Click on **"</> Open code editor"** to switch to YAML view. 
-
-    ![CodeEditor](7.2_4-CodeEditor.png)
-
-5. Find the `GenerateAzureResourcesTable` section with 'Ctrl+F' to add the WAF Checklist action.
-
-    ![FindNode](7.2_5-FindNode.png)
-
-6. Scroll down where the **GenerateAzureResourcesTable** block ends. Add 2 lines after and insert the code below
-
- ```yaml
-   - kind: SearchAndSummarizeContent
-      id: CostEst01
-      displayName: GenerateCostEstimation
-      variable: Topic.varCostEstimate
-      userInput: =Topic.varApp & " " & Topic.varAzureResourceTable.Text.MarkdownContent
-      additionalInstructions: |-
-        You are an Azure cost estimation expert generating a cost analysis section.
-
-        APPLICATION NAME: {Topic.varApp}
-
-        AZURE RESOURCES IDENTIFIED:
-        {Topic.varAzureResourceTable.Text.MarkdownContent}
-
-        Generate ONLY the Cost Estimation section.
-
-        COST ESTIMATION SECTION:
-        Use exact heading: ## 💰 Estimated Monthly Costs
-
-        INSTRUCTIONS:
-        1. Analyze each Azure resource from the resource table
-        2. Provide estimated monthly cost ranges based on the SKU tiers identified
-        3. Group costs by category
-
-        CREATE A COST TABLE:
-        | Category | Resource | SKU | Est. Monthly Cost (USD) |
-        |----------|----------|-----|-------------------------|
-
-        Include these categories:
-        - **Compute:** App Services, Functions, Container Apps
-        - **Data:** SQL Database, Cosmos DB, Storage Accounts
-        - **Networking:** Front Door, Firewall, Private Link, Bandwidth
-        - **Security:** Key Vault, WAF, DDoS Protection
-        - **Monitoring:** Application Insights, Log Analytics, Sentinel
-
-        AFTER THE TABLE ADD:
-
-        ### 📊 Cost Summary
-        - **Estimated Monthly Total:** $X,XXX - $X,XXX
-        - **Estimated Annual Total:** $XX,XXX - $XX,XXX
-
-        ### 💡 Cost Optimization Recommendations
-        Add 3-4 bullet points with cost-saving recommendations such as:
-        - Reserved Instances for predictable workloads
-        - Auto-scaling policies to reduce off-peak costs
-        - Lifecycle policies for storage
-        - Right-sizing based on actual usage
-
-        PRICING GUIDELINES (use these estimates):
-        - App Service P2v2: $150-200/month per instance
-        - App Service P3v2: $300-400/month per instance
-        - SQL Database Business Critical: $400-800/month
-        - SQL Database Standard: $150-300/month
-        - Event Hubs Standard: $20-50/month per TU
-        - Event Hubs Premium: $100-200/month per PU
-        - Key Vault Standard: $0.03 per 10,000 operations
-        - Application Insights: $2.30 per GB ingested
-        - Log Analytics: $2.76 per GB ingested
-        - Azure Firewall Standard: $900-1,100/month
-        - Azure Firewall Premium: $1,500-1,800/month
-        - Front Door Standard: $35/month + $0.01/request
-        - Front Door Premium: $330/month + usage
-        - Azure Sentinel: $2.46 per GB analyzed
-        - Storage Account (Hot): $0.018 per GB/month
-        - Data Lake Storage: $0.02 per GB/month
-
-        Add citation [1] at end.
-      fileSearchDataSource:
-        searchFilesMode:
-          kind: SearchAllFiles
-      knowledgeSources:
-        kind: SearchAllKnowledgeSources
-      responseCaptureType: FullResponse
-``` 
-
-![Line568](7.2_6-Line568.png)
-
-7. Find the `sendActivity_displayOnly` section with 'Ctrl+F' to add the WAF Checklist action.
-
-    ![FindNode](7.2_7-FindNode.png)
-
-8. Scroll down where the **sendActivity_displayOnly** block ends . Add 2 lines after insert the code below
-
-                    {Topic.varWAFChecklist.Text.MarkdownContent}
-
-9. Save
-
-    ![Save](7.2_9-Test.png)
-
-10. Start a New Test Session in the chat window to test the new feature as shown in the Image
-
-    ![Test](7.2_10-Test.png)
-
