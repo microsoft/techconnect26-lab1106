@@ -5,10 +5,10 @@
 1. Select **Agents** in the left sidebar, and select **App Intake Agent v1.3.4** from the list of agents
    ![TestingIntakeAgent](4.1_00-TestIntakeAgent.png)
 
-2. Click inside the chat input box in the **Test your agent** panel on the right side of the Agent Overview page.
+2. Select inside the chat input box in the **Test your agent** panel on the right side of the Agent Overview page.
    ![TestingIntakeAgent](4.1_01-TestIntakeAgent.png)
 
-3. Attach the **SmartlogisticAppsOverview.pdf** file from the Desktop, then either click the text below (to insert it to the input box), or type it yourself, and click the send button (next to attach button):
+3. Attach the **SmartlogisticAppsOverview.pdf** file from the Desktop, then either select the text below (to insert it into the input box), or type it yourself, and select the send button (next to attach button):
 
    `Here is the architectural document for 'SmartLogistics'. Please review it and only ask what's missing.`
 
@@ -32,16 +32,16 @@ The Design Agent supports two operational modes:
 - **Interactive Mode**
 - **Autonomous Mode**
 
-This module focuses on the **interactive** conversation-based approach, and automomous mode will be covered in the next module.
+This module focuses on the **interactive** conversation-based approach, and autonomous mode will be covered in the next module.
 
-1. Select **Agents** in the left sidebar, and select the **Application Design Agent** from the list of Agents
+1. Select **Agents** in the left sidebar, and select the **Application Design Agent** from the list of agents
    ![TestingDesignAgent](4.2_00-TestingDesignAgent.png)
 
-2. Click inside the chat input box in the **Test your agent** panel on the right side of the Agent overview page.
+2. Select inside the chat input box in the **Test your agent** panel on the right side of the Agent overview page.
 3. Review the agent's welcome message:
    ![TestingDesignAgent](4.2_01-TestingDesignAgent.png)
 
-4. In the test panel, select the _Generate a Design Document_ suggested prompt button. Additionaly, You can either click the text below to insert it into the input box, or type it yourself.:
+4. In the test panel, select the _Generate a Design Document_ suggested prompt button. Additionally, you can either select the text below to insert it into the input box, or type it yourself:
 
    `Generate design document for the target Azure architecture of the attached Application`
 
@@ -57,7 +57,7 @@ This module focuses on the **interactive** conversation-based approach, and auto
 
 7. Wait for the agent to process (Average duration: ~71 seconds). 
 
-8. Don't move away from the window until the response is completed. If takes more time than the average the response looks like as shown in the Image
+8. Don't move away from the window until the response is completed. If it takes more time than the average, the response looks like as shown in the Image
    
    ![DesignAgentResponse](4.2_03-DesignAgentResponse.png)
 

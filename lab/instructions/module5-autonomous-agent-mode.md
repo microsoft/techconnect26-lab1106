@@ -52,20 +52,20 @@ In Autonomous Mode, the agent workflow is:
 
 ## Step 1: Triggers Configuration
 
-1. In Copilot Studio,Hover over the Agent icon on the left ribbon to show the list of the Agents and click on **Application Design Agent**
+1. In Copilot Studio, hover over the Agent icon on the left ribbon to show the list of the Agents and select **Application Design Agent**
 
     ![Agent](5.1_1-ApplicationDesignAggent.png)
 
 2. In the agent overview, navigate to the **Triggers** section
-3. Click **+ Add trigger**
+3. Select **+ Add trigger**
 
     ![Trigger](5.1_3-Trigger.png)
 
-4. Select **When an file is created (properties only)** from the list of triggers and click **Next**
+4. Select **When a file is created (properties only)** from the list of triggers and select **Next**
 
     ![SharePointTrigger](5.1_4-SharePointTrigger.png)
 
-5. Review the green checks in the apps and Click **Next**
+5. Review the green checks in the apps and select **Next**
 
     ![Permission](5.1_5-TriggerSharePointPermission.png)
 
@@ -80,63 +80,63 @@ In Autonomous Mode, the agent workflow is:
     | (3) Library Name | Select **Documents** from the list |
     | (4) Folder Path  | Select **/Shared Document//Intake-Documents** from the list |
     | (5) Limit Columns by View (Optional)| in blank|
-    | (6) Additional instructions to the agent when it's invoced by this trigger | **Use contect from Body** (Don't change it)
+    | (6) Additional instructions to the agent when it's invoked by this trigger | **Use context from Body** (Don't change it)
 
     ──────────────────────────────────────────────────────────────────────────────────────
 
     ![TriggerConfiguration](5.1_6-TriggerConfiguration.png)
 
-7. Click **Create trigger**
-8. **Close**
+7. Select **Create trigger**
+8. Select **Close**
 
 The Trigger is set, let's test the Autonomous mode
 
 ## Step 2: Testing Autonomous Mode
 
-We are ready to upload a document into SharePoint to make our Agent generates a Design document to migrate to Azure the application detailed in the document
+We are ready to upload a document into SharePoint to make our Agent generate a Design document to migrate to Azure the application detailed in the document
 
-1. To navigate to Sharepoint, click on the waffle icon on the top left of your current Edge browser tab and select SharePoint
+1. To navigate to SharePoint, select the waffle icon on the top left of your current Edge browser tab and select SharePoint
 
     ![NavigateToSharePoint](5.2_1-NavigateToSharePoint.png)
 
-2. click on the site name under **Following** (or under **Recent**) in the left menu
+2. Select the site name under **Following** (or under **Recent**) in the left menu
 
     ![NavigateToSite](5.2_2-NavigateToSite.png)
 
-    This was created in step Module 0 Prerequisites
+    This was created in Module 0 Prerequisites
 
-3. Click on Document on the left menu
+3. Select **Documents** on the left menu
 4. Open **Intake-Documents** folder
 
     ![IntakeDocumentsFolder](5.2_4-IntakeDocumentsFolder.png)
 
-5. Upload the document. Click on **Create or upload** on the right
-6. Click on **Files upload**
-7. Select the **Intake.md** or **Intake.pdf** file frome the Desktop and click  **Open**
+5. Upload the document. Select **Create or upload** on the right
+6. Select **Files upload**
+7. Select the **Intake.md** or **Intake.pdf** file from the Desktop and select **Open**
 
     ![UploadFile](5.2_7-UploadFile.png)
 
-    This is the trigger to generate the Design document. Before seen the Architecture Design Document let's check the flows are completed successfully.
+    This is the trigger to generate the Design document. Before seeing the Architecture Design Document let's check the flows are completed successfully.
 
     Let's check the Flow to Invoke the Agent
 
-8. Go to the Edge tab where Copilot Studio is open. Hover over the **Flows** icon click on **Invoke Design Agent**.
+8. Go to the Edge tab where Copilot Studio is open. Hover over the **Flows** icon and select **Invoke Design Agent**.
 
     ![InvokeDesignAgentFlow](5.2_8-InvokeDesignAgentFlow.png)
 
 9. Navigate to the Overview tab on the top, go to **28-day run history**
-10. Click on **Refresh** until the status changes to *Succeeded*
+10. Select **Refresh** until the status changes to *Succeeded*
 
     ![FlowStatus](5.2_10-FlowStatus.png)
 
     Let's check the Flow to generate the Design document and save it into the Architecture-Documents has finished successfully
 
-11. Go to Copilot Studio and click on **Flows** and click on **Save Design Document**.
+11. Go to Copilot Studio and select **Flows** and select **Save Design Document**.
 
     ![SaveDesignDocumentFlow](5.2_11-SaveDesignDocumentFlow.png)
 
 12. Navigate to the Overview tab on the top, go to **28-day run history**
-13. The status will be *Succeeded**. Click on **Refresh** until the status changes to *Succeeded*
+13. The status will be *Succeeded*. Select **Refresh** until the status changes to *Succeeded*
 
     ![FlowStatus](5.2_13-FlowStatus.png)
 

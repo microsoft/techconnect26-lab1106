@@ -4,11 +4,11 @@ The App Intake Agent and Application Design Agent use a knowledge file to ensure
 
 ## Step 1: App Intake Agent v1.3.4 Knowledge
 
-1. In the current Edge browser tab, in Copilot Studio, Hover over the Agent icon on the left ribbon to show the list of the Agents and click on **App Intake Agent v1.3.4**
+1. In the current Edge browser tab, in Copilot Studio, hover over the Agent icon on the left ribbon to show the list of the Agents and select **App Intake Agent v1.3.4**
 
     ![IntakeAgentKnowledge](3.1_1-IntakeAgentKnowledge.png)
 
-2. Click the **Knowledge** tab in the top navigation and review the Status = **Ready**
+2. Select the **Knowledge** tab in the top navigation and review the Status = **Ready**
 
     ![StatusReady](3.1_2-StatusReady.png)
 
@@ -16,11 +16,11 @@ The App Intake Agent and Application Design Agent use a knowledge file to ensure
 
 ## Step 2: Application Design Agent
 
-1. Hover over the Agent icon on the left ribbon to show the list of the Agents and click on **Application Design Agent** from the list of Agents
+1. Hover over the Agent icon on the left ribbon to show the list of the Agents and select **Application Design Agent** from the list of agents
 
     ![DesignAgentKnowledge](3.2_1-DesignAgentKnowledge.png)
 
-2. Click the **Knowledge** tab in the top navigation and review the Status = **Ready**
+2. Select the **Knowledge** tab in the top navigation and review the Status = **Ready**
 
     ![StatusReady](3.2_2-StatusReady.png)
 
