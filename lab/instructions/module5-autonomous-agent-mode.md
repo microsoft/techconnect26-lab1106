@@ -1,7 +1,7 @@
 # Module 5: Autonomous Agent Mode (8 minutes)
 
 The Design Agent can operate as a fully autonomous agent, automatically processing intake documents without user intervention. This mode is ideal for high-volume environments or when architects want to batch-process multiple application assessments.
-In this Lab we'll upload a file into the SharePoint folder *Intake-Documents* and the Agent will create and save the Architecture Design Document into the SharePoint folder *Architecture-Documents*
+In this Lab we'll upload a file into the SharePoint folder _Intake-Documents_ and the Agent will create and save the Architecture Design Document into the SharePoint folder _Architecture-Documents_
 
 **Understanding Autonomous Mode**
 
@@ -13,7 +13,7 @@ In Autonomous Mode, the agent workflow is:
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  ┌──────────────────┐                                           │
-│  │📁SharePoint      |Intake document uploaded to designated    |  
+│  │📁SharePoint      |Intake document uploaded to designated    |
 │  │  Intake-Documents│   folder                                  |
 |  |    Folder        │                                           |
 │  └────────┬─────────┘                                           │
@@ -54,37 +54,37 @@ In Autonomous Mode, the agent workflow is:
 
 1. In Copilot Studio, hover over the Agent icon on the left ribbon to show the list of the Agents and select **Application Design Agent**
 
-    ![Agent](5.1_1-ApplicationDesignAggent.png)
+   ![Agent](5.1_1-ApplicationDesignAggent.png)
 
 2. In the agent overview, navigate to the **Triggers** section
 3. Select **+ Add trigger**
 
-    ![Trigger](5.1_3-Trigger.png)
+   ![Trigger](5.1_3-Trigger.png)
 
 4. Select **When a file is created (properties only)** from the list of triggers and select **Next**
 
-    ![SharePointTrigger](5.1_4-SharePointTrigger.png)
+   ![SharePointTrigger](5.1_4-SharePointTrigger.png)
 
 5. Review the green checks in the apps and select **Next**
 
-    ![Permission](5.1_5-TriggerSharePointPermission.png)
+   ![Permission](5.1_5-TriggerSharePointPermission.png)
 
 6. Configure the trigger settings:
 
-    Trigger Configuration
+   Trigger Configuration
 
-    | Type | Value |
-    | ---- | ----- |
-    | (1) Trigger Type | When a file is created in SharePoint (Properties only) |
-    | (2) Site Address | Select from the list (This is the Site configured in Module 2) |
-    | (3) Library Name | Select **Documents** from the list |
-    | (4) Folder Path  | Select **/Shared Document//Intake-Documents** from the list |
-    | (5) Limit Columns by View (Optional)| in blank|
-    | (6) Additional instructions to the agent when it's invoked by this trigger | **Use context from Body** (Don't change it)
+   | Type                                                                       | Value                                                          |
+   | -------------------------------------------------------------------------- | -------------------------------------------------------------- |
+   | (1) Trigger Type                                                           | When a file is created in SharePoint (Properties only)         |
+   | (2) Site Address                                                           | Select from the list (This is the Site configured in Module 2) |
+   | (3) Library Name                                                           | Select **Documents** from the list                             |
+   | (4) Folder Path                                                            | Select **/Shared Document//Intake-Documents** from the list    |
+   | (5) Limit Columns by View (Optional)                                       | in blank                                                       |
+   | (6) Additional instructions to the agent when it's invoked by this trigger | **Use context from Body** (Don't change it)                    |
 
-    ──────────────────────────────────────────────────────────────────────────────────────
+   ──────────────────────────────────────────────────────────────────────────────────────
 
-    ![TriggerConfiguration](5.1_6-TriggerConfiguration.png)
+   ![TriggerConfiguration](5.1_6-TriggerConfiguration.png)
 
 7. Select **Create trigger**
 8. Select **Close**
@@ -97,35 +97,35 @@ We are ready to upload a document into SharePoint to make our Agent generate a D
 
 1. To navigate to SharePoint, select the waffle icon on the top left of your current Edge browser tab and select SharePoint
 
-    ![NavigateToSharePoint](5.2_1-NavigateToSharePoint.png)
+   ![NavigateToSharePoint](5.2_1-NavigateToSharePoint.png)
 
 2. Select the site name under **Following** (or under **Recent**) in the left menu
 
-    ![NavigateToSite](5.2_2-NavigateToSite.png)
+   ![NavigateToSite](5.2_2-NavigateToSite.png)
 
-    This was created in Module 0 Prerequisites
+   This was created in Module 0 Prerequisites
 
 3. Select **Documents** on the left menu
 4. Open **Intake-Documents** folder
 
-    ![IntakeDocumentsFolder](5.2_4-IntakeDocumentsFolder.png)
+   ![IntakeDocumentsFolder](5.2_4-IntakeDocumentsFolder.png)
 
 5. Upload the document. Select **Create or upload** on the right
 6. Select **Files upload**
-7. Select the **Intake.md** or **Intake.pdf** file from the Desktop and select **Open**
+7. Select the **Intake.md** file from the Desktop and select **Open**
 
-    ![UploadFile](5.2_7-UploadFile.png)
+   ![UploadFile](5.2_7-UploadFile.png)
 
-    This is the trigger to generate the Design document. Before seeing the Architecture Design Document let's check the flows are completed successfully.
+   This is the trigger to generate the Design document. Before seeing the Architecture Design Document let's check the flows are completed successfully.
 
-    Let's check the Flow to Invoke the Agent
+   Let's check the Flow to Invoke the Agent
 
 8. Go to the Edge tab where Copilot Studio is open. Hover over the **Flows** icon and select **Invoke Design Agent**.
 
-    ![InvokeDesignAgentFlow](5.2_8-InvokeDesignAgentFlow.png)
+   ![InvokeDesignAgentFlow](5.2_8-InvokeDesignAgentFlow.png)
 
 9. Navigate to the Overview tab on the top, go to **28-day run history**
-10. Select **Refresh** until the status changes to *Succeeded*
+10. Select **Refresh** until the status changes to _Succeeded_
 
     ![FlowStatus](5.2_10-FlowStatus.png)
 
@@ -136,7 +136,7 @@ We are ready to upload a document into SharePoint to make our Agent generate a D
     ![SaveDesignDocumentFlow](5.2_11-SaveDesignDocumentFlow.png)
 
 12. Navigate to the Overview tab on the top, go to **28-day run history**
-13. The status will be *Succeeded*. Select **Refresh** until the status changes to *Succeeded*
+13. The status will be _Succeeded_. Select **Refresh** until the status changes to _Succeeded_
 
     ![FlowStatus](5.2_13-FlowStatus.png)
 
@@ -147,4 +147,3 @@ We are ready to upload a document into SharePoint to make our Agent generate a D
     ![ArchitectureDocument](5.2_14-ArchitectureDocument.png)
 
     In case the Agent is taking long to respond there is a copy of the output on your desktop named **Design.md**
-

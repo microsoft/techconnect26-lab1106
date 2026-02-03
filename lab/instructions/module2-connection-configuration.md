@@ -80,7 +80,7 @@ The Design Agent requires the following connections:
 
    4. Once complete, select the **Publish** button on the top right corner of the Designer page.
 
-3. **Save Design to SharePoint v1** flow
+3. **Save Design Document** flow
    1. Select **Flows** in the left sidebar in Copilot Studio. On the page that opens up, hover over the row for **Save Design to SharePoint v1**, select the **ellipsis (...)** to open a context menu, and select **Edit agent flow** option:
       ![SaveDesigntoSharePoint_v1](2.2_01-SaveDesigntoSharePoint_v1-Flow.png)
 
