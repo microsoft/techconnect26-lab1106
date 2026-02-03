@@ -13,50 +13,45 @@ In this module we'll access to Copilot Studio to Import the Solutions, then we'l
    ![CopilotStudio](1.1_5-CopilotStudio.png)
 
 6. Skip the Welcome window
-7. Select on three dots on the top right
-8. Select **X Cancel agent creation**
-9. Select **Yes, continue**
-
-   ![Continue](1.1_9-Continue.png)
 
 Now we start the process to import the Solution packages.
 Let's start with the **IntakeAgent_1_0_0_7** package
 
-10. On the left ribbon, select the three dots if you don't see the **Solutions**
-11. Select **Solutions** (a new tab opens in the Edge browser)
+7. On the left ribbon, select the three dots if you don't see the **Solutions**
+8. Select **Solutions** (a new tab opens in the Edge browser)
 
-      ![SolutionsIcon](1.1_11-SolutionsIcon.png)
+   ![SolutionsIcon](1.1_11-SolutionsIcon.png)
 
-12.  Select **Import Solution** from the command bar
-13.  Select **Browse** to select the solution package to import
-14.  Select the zip file **IntakeAgent_1_0_0_7.zip** solution package
-15. Select **Open**
+9. Select **Import Solution** from the command bar
+10. Select **Browse** to select the solution package to import
+11. Select the zip file **IntakeAgent_1_0_0_7.zip** solution package
+12. Select **Open**
 
-       ![OpenSolutionPackage](1.1_15-OpenSolutionPackage.png)
+    ![OpenSolutionPackage](1.1_15-OpenSolutionPackage.png)
 
-16. Select **Next**
-17. Select **Next**
-18. When green checks are in all services then Select **Import**
+13. Select **Next**
+14. Select **Next**
+15. When green checks are in all services then Select **Import**
 
-     ![Import](1.1_18-Import.png)
+    ![Import](1.1_18-Import.png)
 
 Let's continue importing the **DesignAgent_1_0_0_12** package
-*Execute the prior steps 12 and 13 again* and come back to *step 19*
+_Execute the prior steps 12 and 13 again_ and come back to _step 19_
 
-19. Select the zip file **DesignAgent_1_0_0_12.zip** solution package
-20. Select **Open**
+16. Select the zip file **DesignAgent_1_0_0_12.zip** solution package
+17. Select **Open**
 
-     ![OpenSolutionPackage](1.1_19-OpenSolutionPackage.png)
+    ![OpenSolutionPackage](1.1_19-OpenSolutionPackage.png)
 
-21. Select **Next**
-22. Select **Next**
-23. When green checks appear for all services, select **Import**
+18. Select **Next**
+19. Select **Next**
+20. When green checks appear for all services, select **Import**
 
-     ![OpenSolutionPackage](1.1_23-OpenSolutionPackage.png)
+    ![OpenSolutionPackage](1.1_23-OpenSolutionPackage.png)
 
 Wait for the packages to be imported. Once imported, you will see the status change to **Solution "Intake-Agent" imported successfully with warnings**. Same for the Application-Design-Agent package. It's Ok.
 
- ![Warning](1.1_23-Warning.png)
+![Warning](1.1_23-Warning.png)
 
 ## Step 2: Update Imported Agents
 
@@ -91,11 +86,10 @@ Let's continue with the Application Design Agent. Don't need to close this windo
 
 1. Hover over the Agent icon on the left ribbon to show the list of the Agents and select **Application Design Agent**
 2. Verify the agent overview displays correctly in the Test Agent window:
-**Expected Overview Screen:**
+   **Expected Overview Screen:**
 
    ![ApplicationDesignAgent](1.2.2_2-ApplicationDesignAgent.png)
 
 3. In the Overview tab on the top, scroll down to Knowledge and verify **Web Search** is Disabled
 
    ![WebSearch](1.2.2_3-WebSearch.png)
-
