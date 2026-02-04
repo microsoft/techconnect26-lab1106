@@ -28,7 +28,7 @@ Before publishing to any channel, you must first publish the agent:
 4. Click **Publish**
 5. Wait for confirmation: "Your agent is published"
 
-**Important:** You must republish the agent whenever you make changes to topics, knowledge, or settings.
+> **Important:** You must republish the agent whenever you make changes to topics, knowledge, or settings.
 
 ## Step 9.3: Publish to Microsoft 365 Copilot
 
