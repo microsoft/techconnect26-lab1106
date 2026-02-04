@@ -34,11 +34,9 @@ Before publishing to any channel, you must first publish the agent:
 
 For organizations with Microsoft 365 Copilot, the Design Agent can be integrated as a plugin.
 
-### 9.3.1 Enable Copilot Integration
-
 1. Go to **Channels** > **Microsoft 365 Copilot**
 2. Click **Teams and Microsfot 365 Copilot**
-3. Keep checked *Make agent available in Microosft 365 Copilot*
+3. Keep checked _Make agent available in Microosft 365 Copilot_
 4. Click on **See agent in Microsoft 365**
 
    ![PublishAgent](9.3.1_4-PublishAgentinMicrosoft365.png)
@@ -47,49 +45,4 @@ For organizations with Microsoft 365 Copilot, the Design Agent can be integrated
 
    ![PublishAgentinM365Copilot](9.3.1_5-PublishAgentinM365Copilot.png)
 
-Note:The agent will request to connect the connections
-
-## Step 9.4: Publish to Demo Website (Optional)
-
-Create a standalone demo website for customer presentations.
-
-### 9.4.1 Configure Demo Website
-
-1. Go to **Channels** > **Demo website**
-2. Click **Copy** to get the demo URL:
-
-   ```
-   https://copilotstudio.microsoft.com/environments/[env]/bots/[botId]/webchat
-   ```
-
-3. Customize appearance:
-   - Welcome message
-   - Suggested actions
-   - Color theme
-
-### 9.4.2 Share Demo URL
-
-Share the demo URL with customers for presentations:
-
-**Demo URL:** `https://copilotstudio.microsoft.com/environments/.../webchat`
-
-## Step 9.5: Channel Management Best Practices
-
-| Practice        | Recommendation                                   |
-| --------------- | ------------------------------------------------ |
-| Version control | Note published version in channel description    |
-| Access control  | Use Azure AD groups to control channel access    |
-| Monitoring      | Enable analytics for each channel                |
-| Updates         | Communicate changes before republishing          |
-| Testing         | Test in dev channel before production deployment |
-
-## Step 9.6: Post-Publishing Checklist
-
-After publishing to channels, verify:
-
-- Agent responds correctly in each channel
-- File upload works (where supported)
-- Connections function properly
-- Email notifications are sent
-- SharePoint integration works
-- Analytics are being captured
+> **Note:** The agent will request to connect the connections
