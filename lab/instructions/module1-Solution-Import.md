@@ -16,7 +16,7 @@ In this module we'll access to Copilot Studio to Import the Solutions, then we'l
 
 ## Alternative environment provisioning
 
-Review the Copilot Studio page, if the browser URL contains the default environment URL: "copilotstudio.microsoft.com/environments/**Default-4cfe372a-37a4-44f8-91b2-5faf34253c62**/home", then you might need to create an development environment manually. Follow the following steps to create one manually else skipt to point 7:
+Review the Copilot Studio page, if the browser URL contains the default environment URL: "copilotstudio.microsoft.com/environments/**Default-4cfe372a-37a4-44f8-91b2-5faf34253c62**/home", then you might need to create a Copilot Studio development environment manually. Follow the following steps to create one manually else skipt to point 7:
 - i. Open a New Tab in the Edge browser
 - ii. Navigate to +++https://admin.powerplatform.microsoft.com+++
 - iii. On the left ribben, select **Manage**
