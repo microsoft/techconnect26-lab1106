@@ -14,6 +14,30 @@ In this module we'll access to Copilot Studio to Import the Solutions, then we'l
 
 6. Skip the Welcome window
 
+## Alternative environment provisioning
+
+Review the Copilot Studio page, if the browser URL contains the default environment URL: "copilotstudio.microsoft.com/environments/**Default-4cfe372a-37a4-44f8-91b2-5faf34253c62**/home", then you might need to create an development environment manually. Follow the following steps to create one manually else skipt to point 7:
+- i. Open a New Tab in the Edge browser
+- ii. Navigate to +++https://admin.powerplatform.microsoft.com+++
+- iii. On the left ribben, select **Manage**
+- iv.  Select the **+ New** button
+- v. Supply the environment name as your username concatenate with **dev**, as an example **User1-59006347-Dev**
+- vi. Select **Developer** as the Type
+- vii. Select the **Next** button
+
+   ![PowerPlatform New Environment](1.1_v-NewEnvironment.png)
+
+- viii. Select the **Save** button
+
+   ![PowerPlatform New Environment](1.1_viii-NewEnvironment.png)
+
+- ix. Wait for the environment to be fully provisioned
+- x. Select the Copilot Studion browser tab and refresh the Page
+- xi. In the top left select the Default environment and then
+- xii. Select the Environment you have created
+
+   ![Environment Selection](1.1_xi-SelectEnvironment.png)
+
 Now we start the process to import the Solution packages.
 Let's start with the **IntakeAgent_1_0_0_7** package
 
@@ -22,7 +46,7 @@ Let's start with the **IntakeAgent_1_0_0_7** package
 
    ![SolutionsIcon](1.1_11-SolutionsIcon.png)
 
-9. Select **Import Solution** from the command bar
+9.  Select **Import Solution** from the command bar
 10. Select **Browse** to select the solution package to import
 11. Select the zip file **IntakeAgent_1_0_0_7.zip** solution package
 12. Select **Open**
