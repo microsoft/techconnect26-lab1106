@@ -22,7 +22,7 @@ Review the Copilot Studio page, if the browser URL contains the default environm
 - iii. On the left ribben, select **Manage**
 - iv.  Select the **+ New** button
 - v. Supply the environment name as your username concatenate with **dev**, as an example **User1-59006347-Dev**
-- vi. Select one of this options as the Region: **Europe**, **Canada** , **UK** or **Asia** 
+- vi. Select one of these options as the Region: +++**Europe**+++, +++**Canada**+++ , +++**UK**+++ or +++**Asia**+++ 
 - vii. Select **Developer** as the Type
 - viii. Select the **Next** button
 
