@@ -22,19 +22,20 @@ Review the Copilot Studio page, if the browser URL contains the default environm
 - iii. On the left ribben, select **Manage**
 - iv.  Select the **+ New** button
 - v. Supply the environment name as your username concatenate with **dev**, as an example **User1-59006347-Dev**
-- vi. Select **Developer** as the Type
-- vii. Select the **Next** button
+- vi. Select one of this options as the Region: **Europe**, **Canada** , **UK** or **Asia** 
+- vii. Select **Developer** as the Type
+- viii. Select the **Next** button
 
    ![PowerPlatform New Environment](1.1_v-NewEnvironment.png)
 
-- viii. Select the **Save** button
+- ix. Select the **Save** button
 
    ![PowerPlatform New Environment](1.1_viii-NewEnvironment.png)
 
-- ix. Wait for the environment to be fully provisioned
-- x. Select the Copilot Studion browser tab and refresh the Page
-- xi. In the top left select the Default environment and then
-- xii. Select the Environment you have created
+- x. Wait for the environment to be fully provisioned
+- xi. Select the Copilot Studio browser tab and refresh the Page
+- xii. In the top right select the Default environment and then
+- xiii. Select the Environment you have created
 
    ![Environment Selection](1.1_xi-SelectEnvironment.png)
 
