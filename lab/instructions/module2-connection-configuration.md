@@ -91,9 +91,6 @@ The Design Agent requires the following connections:
 
       3. Next, delete content in the _Folder Path_ input box, select the folder icon (near the right side of the input box), and select the _Shared Documents > Architecture-Documents_ folder.
 
-   3. On the flow Designer page, select the action **Get file properties** to expand it.
-      1. Delete content in _Site Address_ and select the display button, then select the SharePoint site you had created.
-      2. Delete content in _Library Name_, select the display button, and select _Documents_.
-   4. Once complete, select **Publish**.
+   3. Once complete, select **Publish**.
 
 4. Review all flows status = **Published**; you may have to refresh your page.
