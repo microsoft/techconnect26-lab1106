@@ -64,6 +64,7 @@ The Design Agent requires the following connections:
    1. Hover over the row for **Invoke Design Agent**, select the **ellipsis (...)** to open a context menu, and select **Edit agent flow** option:
       ![InvokeDesignAgentFlow](2.2_00-Invoke-Agent-Flow.png)
    2. On the flow Designer page, select the **When a file is created or modified (properties only)** action to expand it.
+      ![InvokeDesignAgentFlowExpan](2.2_00.1-Invoce-Agent-Flow.png)
       1. In the action card, clear the content in the _Site Address_ input by selecting the **X** near the right side of the input box.
 
       2. Select the display button (**˅**), and select the SharePoint site address from the list that you had created.
@@ -75,6 +76,7 @@ The Design Agent requires the following connections:
       4. Select the title of the action (**When a file is created or modified (properties only)**) to collapse it.
 
    3. On the flow Designer page, select the **Get file content** action to expand it.
+      ![InvokeDesignAgentFlowExpanGet](2.2_01.1-Invoke-Agent-Flow.png)
       1. In the action card, follow the same procedure as the previous step, and update the _Site Address_ to the SharePoint site you had created.
          ![InvokeDesignAgentFlow](2.2_02-Invoke-Agent-Flow.png)
 
@@ -85,6 +87,7 @@ The Design Agent requires the following connections:
       ![SaveDesigntoSharePoint_v1](2.2_01-SaveDesigntoSharePoint_v1-Flow.png)
 
    2. On the flow Designer page, select the **Create file** action to expand it.
+      ![SaveDesigntoSharePoint](2.2_01.1-SaveDesigntoSharePoint_v1-Flow.png)
       1. In the action card, clear the contents in the _Site Address_ input by selecting the **X** near the right side of the input box.
 
       2. Then, select the display button (**˅**), and select the SharePoint site you had created.
