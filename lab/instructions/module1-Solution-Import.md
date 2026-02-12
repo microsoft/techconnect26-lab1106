@@ -110,7 +110,7 @@ Let's continue with the Application Design Agent. Don't need to close this windo
 ### Step 2.2: Configure Design Agent Settings
 
 1. Hover over the Agent icon on the left ribbon to show the list of the Agents and select **Application Design Agent**
-2. Verify the agent overview displays correctly in the Test Agent window:
+2. In the **Overview** tab, Select **GPT-5 Chat** as agent's model:
    **Expected Overview Screen:**
 
    ![ApplicationDesignAgent](1.2.2_2-ApplicationDesignAgent.png)

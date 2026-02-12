@@ -38,7 +38,7 @@ Close the Welcome window
 
     ![Template](0.1_12-Template.png)
 
-13. Name your site with the truncated name of the user used in this Lab and select **Next**
+13. Name your site removing from your user name "@LODSPRODMCA.onmicrosoft.com". User name **Username: +++@lab.CloudPortalCredential(User1).Username+++** and select **Next**
 
     ![Name](0.1_13-Name.png)
 
