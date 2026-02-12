@@ -10,7 +10,7 @@ Open the Edge browser in the taskbar or in your desktop
 
     ![Office365](0.1_03_2-SigninOffice365.png)
 
-4. Sign in with the username  **Username: +++@lab.CloudPortalCredential(User1).Username+++**
+4. Sign in with the **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 5. Temporary Access Password (TAP) the following value **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
 
     ![UserPassword](0.1_05-UserPassword.png)
